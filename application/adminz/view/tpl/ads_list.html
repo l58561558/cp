@@ -1,0 +1,40 @@
+<table class="layui-table table">
+  <colgroup>
+    <col width="150">
+    <col width="200">
+    <col>
+  </colgroup>
+  <thead>
+    <tr >
+      <th style="text-align: center;" width="10%">#</th>
+      <th style="text-align: center;" width="20%">广告位置</th>
+      <th style="text-align: center;" width="20%">跳转地址</th>
+      <th style="text-align: center;" width="20%">图片</th>
+      <th style="text-align: center;" width="10%">操作</th>
+    </tr> 
+  </thead>
+  <tbody>
+  	{volist name="_list" id="info" key='key'}
+    <tr>
+      <td style="text-align: center;">{$key}</td>
+      <td style="text-align: center;">{$info.position_name|default=''}</td>
+      <td style="text-align: center;">{$info.url|default=''}</td>
+      <td style="text-align: center;"><img src="__UPLOADS__/ads/{$info.pic|default=''}"></td>
+      <td style="text-align: center;">
+      	<div class="btn-group btn-group-sm">
+			<a href="{:url('ads/ads_delete')}?id={$info.ads_id}">删除</a>&nbsp;&nbsp;&nbsp;
+			<a href="{:url('ads/edit')}?ads_id={$info.ads_id}">编辑</a>
+		</div>
+	</td>
+    </tr>
+   {/volist}
+  {empty name='_list'}
+  <tr>
+    <td colspan="15">空空如也~</td>
+  </tr>
+  {/empty}
+  </tbody>
+</table>
+<div class="box-footer clearfix">
+  <ul class="pagination pull-right">{$page}</ul>
+</div>

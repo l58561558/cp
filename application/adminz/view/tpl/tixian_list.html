@@ -1,0 +1,52 @@
+<table class="layui-table table">
+  <colgroup>
+    <col width="150">
+    <col width="200">
+    <col>
+  </colgroup>
+  <thead>
+    <tr >
+		<th style="text-align: center;" style="width: 10px">#</th>
+		<th style="text-align: center;">用户编号</th>
+		<th style="text-align: center;">用户名</th>
+		<th style="text-align: center;">银行卡号</th>
+		<th style="text-align: center;">提现状态</th>
+		<th style="text-align: center;">提现金额</th>
+		<th style="text-align: center;">申请时间</th>
+		<th style="text-align: center;">财务操作时间</th>
+		<th style="text-align: center;">操作</th>
+    </tr> 
+  </thead>
+    <tbody>
+  	{volist name="_list" id="info" key='key'}
+    <tr>
+		<td style="text-align: center;">{$key}</td>
+		<td style="text-align: center;">{$info.yhid|default='-'}</td>
+		<td style="text-align: center;">{$info.name|default='-'}</td>
+		<td style="text-align: center;">{$info.bank_card|default='-'}</td>
+		<td style="text-align: center;">{$info.withdraw_status|default='-'}</td>
+		<td style="text-align: center;">{$info.withdraw_money|default='-'}</td>
+		<td style="text-align: center;">{$info.add_time|default='-'}</td>
+		<td style="text-align: center;">{$info.edit_time|default='-'}</td>
+		<td style="text-align: center;">
+	      	<div class="btn-group btn-group-sm">
+				{if condition="$info.status eq 1"}
+				<a href="{:url('tixian/succeed')}?id={$info.id}&user_id={$info.user_id}&status=3">提现成功</a>
+				<a href="{:url('tixian/refuse')}?id={$info.id}&user_id={$info.user_id}&status=4">拒绝提现</a>
+				{else /}
+				<a>{$info.withdraw_status}</a>
+				{/if}
+			</div>
+		</td>
+    </tr>
+   {/volist}
+	{empty name='_list'}
+	<tr>
+		<td colspan="15">空空如也~</td>
+	</tr>
+	{/empty}
+  </tbody>
+</table>
+<div class="box-footer clearfix">
+  <ul class="pagination pull-right">{$page}</ul>
+</div>

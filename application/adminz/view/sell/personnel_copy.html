@@ -1,0 +1,138 @@
+
+<table class="layui-table table">
+	<colgroup>
+		<col width="150">
+		<col width="200">
+		<col>
+	</colgroup>
+	<thead>
+		<tr style="background-color: #009688;color: #fff;">
+			<th style="text-align: center;"></th>
+			<th style="text-align: center;"></th>
+			<th style="text-align: center;"></th>
+			<th style="text-align: center;"></th>
+			<th style="text-align: center;"></th>
+			<th style="text-align: center;"></th>
+			<th style="text-align: center;">当日投注总金额</th>
+			<th style="text-align: center;">近七天投注总金额</th>
+			<th style="text-align: center;">近三十天投注总金额</th>
+			<th style="text-align: center;">投注总金额</th>
+			<th style="text-align: center;"></th>
+			<th style="text-align: center;"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr style="background-color: #009688;color: #fff;">
+			<td style="text-align: center;"></td>
+			<td style="text-align: center;"></td>
+			<td style="text-align: center;"></td>
+			<td style="text-align: center;"></td>
+			<td style="text-align: center;"></td>
+			<td style="text-align: center;"></td>
+			<td style="text-align: center;">{$head_data.today_order_money|default='0'}</td>
+			<td style="text-align: center;">{$head_data.seven_order_money|default='-'}</td>
+			<td style="text-align: center;">{$head_data.month_order_money|default='-'}</td>
+			<td style="text-align: center;">{$head_data.order_money|default='-'}</td>
+			<td style="text-align: center;"></td>
+			<td style="text-align: center;"></td>	
+		</tr>
+	</tbody>
+	<thead>
+		<tr >
+			<th style="text-align: center;" style="width: 10px">#</th>
+			<th style="text-align: center;">相互关系(id)</th>
+			<th style="text-align: center;">用户编号</th>
+			<th style="text-align: center;">姓名</th>
+			<th style="text-align: center;">手机号</th>
+			<th style="text-align: center;">当前身份</th>
+			<th style="text-align: center;">当日投注总金额</th>
+			<th style="text-align: center;">近七天投注总金额</th>
+			<th style="text-align: center;">近三十天投注总金额</th>
+			<th style="text-align: center;">投注总金额</th>
+			<th style="text-align: center;">最后登录时间</th>
+			<th style="text-align: center;" style="width: 100px">操作</th>
+		</tr> 
+	</thead>
+	<tbody>
+		{volist name="_list" id="info" key='key'}
+		<tr style="{if condition='$info.level eq 3'}background-color: #e9f0a5;{/if}{if condition='$info.level eq 2'}background-color: #96b7ca;{/if}">
+			<td style="text-align: center;">{$key}</td>
+			<td style="text-align: center;">{$info.id}</td>
+			<td style="text-align: center;">
+				{notempty name="info.child"}
+					<i class="fa fa-caret-right treegrid" data-nodeid="{$info.id}"></i>
+				{/notempty}
+				{$info.yhid}
+			</td>
+			<td style="text-align: center;">{$info.user_name|default='-'}</td>
+			<td style="text-align: center;">{$info.phone|default='-'}</td>
+			<td style="text-align: center;">{$info.identity|default='-'}</td>
+			<td>{$info.today_order_money}</td>
+			<td>{$info.seven_order_money}</td>
+			<td>{$info.month_order_money}</td>
+			<td>{$info.order_money}</td>
+			<td style="text-align: center;">{$info.last_login_time|default='-'}</td>
+			<td style="text-align: center;"><a href="{:url('order/index')}?id={$info.id}">查看订单</a></td>
+		</tr>
+		{if condition="isset($info.child)"}
+			{volist name="info.child" id="child" key='ke'}
+			<tr class="treegrid-{$child.id} treegrid-parent-{$child.pid} td" style="{if condition='$child.level eq 3'}background-color: #e9f0a5;{/if}{if condition='$child.level eq 2'}background-color: #96b7ca;{/if}display: none;">
+				<td style="text-align: center;">{$ke}</td>
+				<td style="text-align: center;">{$info.id}-{$child.id}</td>
+				<td style="text-align: center;">{$child.yhid}</td>
+				<td style="text-align: center;">{$child.user_name|default='-'}</td>
+				<td style="text-align: center;">{$child.phone|default='-'}</td>
+				<td style="text-align: center;">{$child.identity|default='-'}</td>
+				<td>{$child.today_order_money}</td>
+				<td>{$child.seven_order_money}</td>
+				<td>{$child.month_order_money}</td>
+				<td>{$child.order_money}</td>
+				<td style="text-align: center;">{$child.last_login_time|default='-'}</td>
+				<td style="text-align: center;"><a href="{:url('order/index')}?id={$child.id}">查看订单</a></td>
+			</tr>
+			{/volist}
+		{/if}
+		{/volist}
+		{empty name='_list'}
+		<tr>
+			<td colspan="15">空空如也~</td>
+		</tr>
+		{/empty}
+	</tbody>
+</table>
+
+<script type="text/javascript">
+	$(".open").click(function(){
+		$(".table .td").css('display','table-row');
+		$(".table .fa").removeClass('fa-caret-right');
+		$(".table .fa").addClass('fa-caret-down');
+	})
+	$(".fold").click(function(){
+		$(".table .td").css('display','none');
+		$(".table .fa").addClass('fa-caret-right');
+		$(".table .fa").removeClass('fa-caret-down');
+	})
+</script>
+<script>
+layui.use(['form', 'layedit', 'laydate','upload','table'], function(){
+    var form = layui.form
+    ,layer = layui.layer
+    ,layedit = layui.layedit
+    ,laydate = layui.laydate
+    ,upload = layui.upload;
+
+    var table = layui.table; 
+    //日期
+    laydate.render({
+        elem: '#date'
+        ,type: 'datetime'
+    });
+    laydate.render({
+        elem: '#date1'
+        ,type: 'datetime'
+    }); 
+    laydate.render({
+        elem: '#cate_id'
+    });
+})
+</script>
