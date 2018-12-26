@@ -1,4 +1,0 @@
-<?php
-//000000000000
- exit();?>
-a:1:{i:0;a:13:{s:7:"node_id";i:48;s:9:"node_name";s:12:"销售管理";s:9:"parameter";s:0:"";s:10:"controller";s:4:"sell";s:6:"action";s:5:"index";s:3:"url";s:10:"sell/index";s:3:"pid";i:0;s:7:"is_menu";i:1;s:10:"sort_order";i:50;s:12:"authority_id";i:25;s:14:"authority_code";s:4:"sell";s:9:"menu_list";a:2:{i:0;a:11:{s:7:"node_id";i:49;s:9:"node_name";s:12:"人员列表";s:9:"parameter";s:0:"";s:10:"controller";s:4:"sell";s:6:"action";s:9:"personnel";s:3:"url";s:14:"sell/personnel";s:3:"pid";i:48;s:7:"is_menu";i:1;s:10:"sort_order";i:50;s:12:"authority_id";i:25;s:14:"authority_code";s:4:"sell";}i:1;a:11:{s:7:"node_id";i:50;s:9:"node_name";s:12:"用户列表";s:9:"parameter";s:0:"";s:10:"controller";s:4:"sell";s:6:"action";s:4:"user";s:3:"url";s:9:"sell/user";s:3:"pid";i:48;s:7:"is_menu";i:1;s:10:"sort_order";i:50;s:12:"authority_id";i:25;s:14:"authority_code";s:4:"sell";}}s:11:"controllers";a:1:{i:0;s:4:"sell";}}}
