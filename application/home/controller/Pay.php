@@ -12,22 +12,32 @@ class Pay extends Base
     {
         $data = $_REQUEST;
         $price = $data["price"];
-        // $istype = $data["istype"];
+        // $type = $data["type"];
+        $type = 2;
         $user_id = $data["user_id"];
 
         $yh = db('user')->where('id="'.$user_id.'"')->find();
         if($user_id == 3){
             $price = 1;
         }
-        $pay_memberid = "10090";   //商户ID
+        if($type == 1){ // 支付宝
+            $pay_memberid = "10101";   //商户ID
+            $pay_bankcode = "904";   //银行编码(支付宝)
+            $Md5key = "5m7ym1hq5m717eibjyakjgqo5jg6yu4k";   //密钥
+        }else if($type == 2){ // 银联
+            $pay_memberid = "10090";   //商户ID
+            $pay_bankcode = "913";   //银行编码(银联)
+            $Md5key = "qnsvs9zqg1po05x8hval5bop18u52cot";   //密钥
+        }
+        
         $pay_orderid = date('YmdHis').$yh['id'];    //订单号
         $pay_amount =  $price;    //交易金额
-        $pay_bankcode = "913";   //银行编码(支付宝)
+        
 
         $pay_applydate = date("Y-m-d H:i:s");  //订单时间
-        $pay_notifyurl = "https://zhxbg.com/home/pay/paynotify";   //服务端返回地址
+        $pay_notifyurl = "https://zhxbg.com/home/pay/paynotify?type=".$type;   //服务端返回地址
         $pay_callbackurl = "https://zhxbg.com/home/pay/payreturn/";  //页面跳转返回地址
-        $Md5key = "qnsvs9zqg1po05x8hval5bop18u52cot";   //密钥
+        
         $tjurl = "http://pay.liweiqiguan.com/Pay_Index.html";   //提交地址
 
         //扫码
@@ -67,7 +77,7 @@ class Pay extends Base
         exit;
     }
 
-    public function paynotify()
+    public function paynotify($type)
     {	
     /**
      * ---------------------通知异步回调接收页-------------------------------
@@ -87,7 +97,11 @@ class Pay extends Base
         );
         $orderid = $_REQUEST["orderid"];
         $price = $_REQUEST["amount"];
-        $Md5key = "qnsvs9zqg1po05x8hval5bop18u52cot";   //密钥
+        if($type == 1){ // 支付宝
+            $Md5key = "5m7ym1hq5m717eibjyakjgqo5jg6yu4k";   //密钥
+        }else if($type == 2){ // 银联
+            $Md5key = "qnsvs9zqg1po05x8hval5bop18u52cot";   //密钥
+        }
 
         ksort($ReturnArray);
         reset($ReturnArray);
@@ -107,8 +121,8 @@ class Pay extends Base
                     if($user_id == "YH00123462"){
                         $price = 100;
                     }
-                    $balance = $price*0.4;
-                    $no_balance = $price*0.6;
+                    $balance = $price*0.6;
+                    $no_balance = $price*0.4;
                     db('user')->where('id="'.$user_id.'"')->setInc('balance',$balance );
                     db('user')->where('id="'.$user_id.'"')->setInc('amount_money',$price);
                     db('user')->where('id="'.$user_id.'"')->setInc('no_balance',$no_balance);

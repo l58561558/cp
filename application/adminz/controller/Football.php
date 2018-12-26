@@ -251,7 +251,7 @@ class Football extends Base
             }
         }
         if($order['order_type'] == 3){
-            $hm_id = db('order_gd_user')->where('order_id='.$order['order_id'])->value('gd_id');
+            $gd_id = db('order_gd_user')->where('order_id='.$order['order_id'])->value('gd_id');
             $data['gd_user'] = db('order_gd_user')->where('gd_id='.$gd_id)->select();
             $data['gd'] = db('order_gd_desc')->where('gd_id='.$gd_id)->find();
             $data['gd']['user_name'] = db('user')->where('id='.$data['gd']['user_id'])->value('user_name');

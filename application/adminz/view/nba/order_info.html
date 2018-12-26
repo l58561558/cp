@@ -13,8 +13,8 @@
                     <table class="layui-table" >
                         <thead>
                             <tr>
-                                <th style="text-align: center;">订单编号</th>
-                                <th style="text-align: center;">订单创建时间</th>
+                                <th colspan="2" style="text-align: center;">订单编号</th>
+                                <th colspan="2" style="text-align: center;">订单创建时间</th>
                                 <th style="text-align: center;">订单金额</th>
                                 <th style="text-align: center;">中奖金额</th>
                                 <th style="text-align: center;">比赛场次</th>
@@ -24,8 +24,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="text-align: center;">{$data.order_no}</td>
-                                <td style="text-align: center;">{$data.add_time}</td>
+                                <td colspan="2" style="text-align: center;">{$data.order_no}</td>
+                                <td colspan="2" style="text-align: center;">{$data.add_time}</td>
                                 <td style="text-align: center;">{$data.order_money}</td>
                                 <td style="text-align: center;">{$data.win_money}</td>
                                 <td style="text-align: center;">{$data.game_num}</td>
@@ -35,8 +35,8 @@
                         </tbody>
                         <thead>
                             <tr>
-                                <th style="text-align: center;">场次</th>
-                                <th style="text-align: center;">星期</th>
+                                <th colspan="2" style="text-align: center;">场次</th>
+                                <th colspan="2" style="text-align: center;">星期</th>
                                 <th style="text-align: center;">主队VS客队</th>
                                 <th style="text-align: center;">主队VS客队(比分)</th>
                                 <th style="text-align: center;">投注内容</th>
@@ -47,8 +47,8 @@
                         <tbody>
                             {volist name='data.order_info' id='item'}
                             <tr>
-                                <td style="text-align: center;">{$item.game_no}</td>
-                                <td style="text-align: center;">{$item.week}</td>
+                                <td colspan="2" style="text-align: center;">{$item.game_no}</td>
+                                <td colspan="2" style="text-align: center;">{$item.week}</td>
                                 <td style="text-align: center;">{$item.home_team} VS {$item.road_team}</td>
                                 <td style="text-align: center;">{$item.home_score} : {$item.road_score}</td>
                                 <td style="text-align: center;">
@@ -80,6 +80,132 @@
                             <tr><td colspan="7" style="text-align: center;">空空如也~</td></tr>
                             {/if}
                         </tbody>
+                        {if condition="$data.order_type eq 2"}
+                        <thead>
+                            <tr><th colspan="9" style="text-align: center;">合买信息</th></tr>
+                            <tr>
+                                <th colspan="2" style="text-align: center;">合买发起人订单号</th>
+                                <th colspan="2" style="text-align: center;">合买发起人</th>
+                                <th style="text-align: center;">合买标题</th>
+                                <th style="text-align: center;">方案佣金</th>
+                                <th style="text-align: center;">方案发起时间</th>
+                                <th style="text-align: center;">方案截止时间</th>
+                                <th style="text-align: center;">合买状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" style="text-align: center;">{$data.hm.order_no}</td>
+                                <td colspan="2" style="text-align: center;">{$data.hm.user_name}</td>
+                                <td style="text-align: center;">{$data.hm.hm_title}</td>
+                                <td style="text-align: center;">{$data.hm.brokerage}</td>
+                                <td style="text-align: center;">{$data.hm.add_time}</td>
+                                <td style="text-align: center;">{$data.hm.end_time}</td>
+                                <td style="text-align: center;">{$data.hm.hm_status}</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th colspan="2" style="text-align: center;">方案金额</th>
+                                <th colspan="2" style="text-align: center;">方案份数</th>
+                                <th style="text-align: center;">单份金额</th>
+                                <th style="text-align: center;">自购份数</th>
+                                <th style="text-align: center;">保底份数</th>
+                                <th style="text-align: center;">剩余份数</th>
+                                <th style="text-align: center;">方案中奖金额</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" style="text-align: center;">{$data.hm.hm_money}</td>
+                                <td colspan="2" style="text-align: center;">{$data.hm.hm_num}</td>
+                                <td style="text-align: center;">{$data.hm.one_money}</td>
+                                <td style="text-align: center;">{$data.hm.pay_num}</td>
+                                <td style="text-align: center;">{$data.hm.bd_num}</td>
+                                <td style="text-align: center;">{$data.hm.residue_num}</td>
+                                <td style="text-align: center;">{$data.hm.total_win_money}</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th colspan="2" style="text-align: center;">订单编号</th>
+                                <th colspan="2" style="text-align: center;">用户编号</th>
+                                <th style="text-align: center;">用户昵称</th>
+                                <th style="text-align: center;">购买份数</th>
+                                <th style="text-align: center;">购买金额</th>
+                                <th style="text-align: center;">中奖金额</th>
+                                <th style="text-align: center;">参与时间</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name='data.hm_user' id='item'}
+                            <tr {if condition="$data.order_no eq $item.order_no"} style="background-color: #00c0ef" {/if}>
+                                <td colspan="2" style="text-align: center;">{$item.order_no}</td>
+                                <td colspan="2" style="text-align: center;">{$item.yhid}</td>
+                                <td style="text-align: center;">{$item.user_name}</td>
+                                <td style="text-align: center;">{$item.pay_num}</td>
+                                <td style="text-align: center;">{$item.pay_money}</td>
+                                <td style="text-align: center;">{$item.win_money}</td>
+                                <td style="text-align: center;">{$item.add_time}</td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                        {/if}
+                        {if condition="$data.order_type eq 3"}
+                        <thead>
+                            <tr><th colspan="9" style="text-align: center;">跟单信息</th></tr>
+                            <tr>
+                                <th style="text-align: center;">跟单发起人订单号</th>
+                                <th style="text-align: center;">跟单发起人</th>
+                                <th style="text-align: center;">方案标题</th>
+                                <th style="text-align: center;">方案金额</th>
+                                <th style="text-align: center;">方案中奖金额</th>
+                                <th style="text-align: center;">方案佣金比例</th>
+                                <th style="text-align: center;">方案发起时间</th>
+                                <th style="text-align: center;">方案截止时间</th>
+                                <th style="text-align: center;">跟单状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;">{$data.gd.order_no}</td>
+                                <td style="text-align: center;">{$data.gd.user_name}</td>
+                                <td style="text-align: center;">{$data.gd.gd_title}</td>
+                                <td style="text-align: center;">{$data.gd.gd_money}</td>
+                                <td style="text-align: center;">{$data.gd.total_win_money}</td>
+                                <td style="text-align: center;">{$data.gd.brokerage}</td>
+                                <td style="text-align: center;">{$data.gd.add_time}</td>
+                                <td style="text-align: center;">{$data.gd.end_time}</td>
+                                <td style="text-align: center;">{$data.gd.gd_status}</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th colspan="2" style="text-align: center;">订单编号</th>
+                                <th colspan="2" style="text-align: center;">用户编号</th>
+                                <th style="text-align: center;">用户昵称</th>
+                                <th style="text-align: center;">购买份数</th>
+                                <th style="text-align: center;">购买金额</th>
+                                <th style="text-align: center;">中奖金额</th>
+                                <th style="text-align: center;">参与时间</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name='data.gd_user' id='item'}
+                            <tr {if condition="$data.order_no eq $item.order_no"} style="background-color: #00c0ef" {/if}>
+                                <td colspan="2" style="text-align: center;">{$item.order_no}</td>
+                                <td colspan="2" style="text-align: center;">{$item.yhid}</td>
+                                <td style="text-align: center;">{$item.user_name}</td>
+                                <td style="text-align: center;">{$item.pay_num}</td>
+                                <td style="text-align: center;">{$item.pay_money}</td>
+                                <td style="text-align: center;">{$item.win_money}</td>
+                                <td style="text-align: center;">{$item.add_time}</td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                        {/if}
                     </table> 
                 </div>
             </div>

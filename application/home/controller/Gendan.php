@@ -350,10 +350,9 @@ class Gendan extends Base
         $order_gd_desc = db('order_gd_desc')->where('gd_id='.$gd_id)->find();
         $data['gd_id'] = $order_gd_desc['gd_id'];
         $data['order_id'] = $order_gd_desc['order_id'];
-        $data['pay_money'] = $order_gd_desc['pay_money']; // 自购金额
+        $data['gd_money'] = $order_gd_desc['gd_money']; // 自购金额
         $data['one_money'] = $order_gd_desc['one_money']; // 每份价格
         $data['game_cate'] = $order_gd_desc['game_cate']==1?'竞彩足球':'竞彩篮球'; // 比赛分类
-        $data['pay_num'] = $order_gd_desc['pay_num']; // 剩余可购买金额
         $data['brokerage'] = ($order_gd_desc['brokerage']*100).'%'; // 佣金
         $data['gd_status'] = $order_gd_desc['gd_status']; // 跟单状态:(0.作废|1.进行中|2.已出票)
         $order = db('order')->where('order_id='.$order_gd_desc['order_id'])->find();
@@ -405,8 +404,7 @@ class Gendan extends Base
                 $data[$key]['end_time'] = $list[$key]['end_time'];
                 $data[$key]['gd_title'] = $list[$key]['gd_title'];
                 $data[$key]['game_cate'] = $list[$key]['game_cate']==1?'竞彩足球':'竞彩篮球';
-                $data[$key]['pay_money'] = $list[$key]['pay_money']; // 自购金额
-                $data[$key]['pay_num'] = $list[$key]['pay_num'];
+                $data[$key]['gd_money'] = $list[$key]['gd_money']; // 自购金额
                 $data[$key]['one_money'] = $list[$key]['one_money'];
                 $data[$key]['win_money'] = $order['win_money'];
             }

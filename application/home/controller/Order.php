@@ -270,9 +270,9 @@ class Order extends Base
     public function order($user_id, $type=0, $page=1, $count=10)
     {
         $start = ($page-1)*$count;
-        if($type == 0) $where = 'user_id='.$user_id;
-        if($type == 1) $where = 'user_id='.$user_id.' and order_status=1 and is_win=1';
-        if($type == 2) $where = 'user_id='.$user_id.' and order_status=1 and is_win=0';
+        if($type == 0) $where = 'is_delete=0 and user_id='.$user_id;
+        if($type == 1) $where = 'is_delete=0 and user_id='.$user_id.' and order_status=1 and is_win=1';
+        if($type == 2) $where = 'is_delete=0 and user_id='.$user_id.' and order_status=1 and is_win=0';
 
         $list = db('order')
             ->field('order_id,user_id,order_money,add_time,is_win,game_cate,order_type,order_status')
@@ -439,4 +439,18 @@ class Order extends Base
         echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$data]);
         exit;
     }    
+
+    public function delete_order($order_id)
+    {
+        if(empty($order_id) || $order_id <= 0){
+            echo json_encode(['msg'=>'删除失败','code'=>0,'success'=>false]);
+            exit;
+        }
+        $res = db('order')->where('order_id='.$order_id)->setField('is_delete',1);
+        if($res > 0){
+            echo json_encode(['msg'=>'删除成功','code'=>1,'success'=>true,'data'=>$data]);
+            exit;
+        }
+        
+    }
 }

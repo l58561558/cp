@@ -300,7 +300,7 @@ class Nba extends Base
     public function order_info($order_id)
     {
         $order = db('order')->where('order_id='.$order_id)->order('add_time desc')->find();
-        if($order['order_type'] > 1){
+        if($order['order_type'] == 2){
             $hm_id = db('order_hm_user')->where('order_id='.$order['order_id'])->value('hm_id');
             $data['hm_user'] = db('order_hm_user')->where('hm_id='.$hm_id)->select();
             $data['hm'] = db('order_hm_desc')->where('hm_id='.$hm_id)->find();
@@ -314,7 +314,7 @@ class Nba extends Base
             }
         }
         if($order['order_type'] == 3){
-            $hm_id = db('order_gd_user')->where('order_id='.$order['order_id'])->value('gd_id');
+            $gd_id = db('order_gd_user')->where('order_id='.$order['order_id'])->value('gd_id');
             $data['gd_user'] = db('order_gd_user')->where('gd_id='.$gd_id)->select();
             $data['gd'] = db('order_gd_desc')->where('gd_id='.$gd_id)->find();
             $data['gd']['user_name'] = db('user')->where('id='.$data['gd']['user_id'])->value('user_name');
@@ -339,6 +339,7 @@ class Nba extends Base
         }
         $data['chuan'] = implode(',', $chuann);
         $data['multiple'] = $order['multiple'];
+        $data['order_type'] = $order['order_type'];
 
         $let_arr = array('let_score_home_win','let_score_home_lose');
         $total_arr = array('total_small','total_big');
