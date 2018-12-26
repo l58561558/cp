@@ -19515,3 +19515,112 @@
 [ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005527s ]
 [ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005648s ]
 [ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.006126s ]
+---------------------------------------------------------------
+[ 2018-12-26T15:41:32+08:00 ] 192.168.1.194 192.168.1.190 POST /cp/home/order/get_tz_num
+[ info ] 192.168.1.194/cp/home/order/get_tz_num [运行时间：0.262614s][吞吐率：3.81req/s] [内存消耗：2,205.29kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\WWW\cp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'get_tz_num',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '425',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'user-agent' => 'JinCai/1.1.6 (iPhone; iOS 11.4.1; Scale/2.00)',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'cookie' => 'PHPSESSID=22aafl3r8cs95p955cbuu8e2d1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'host' => '192.168.1.194',
+)
+[ info ] [ PARAM ] array (
+  'chuan' => '3',
+  'game_cate' => '1',
+  'multiple' => '10',
+  'tz' => '[{"game_id":"534","dan":"0","tz_result":["28804"]},{"game_id":"535","dan":"0","tz_result":["28855"]},{"game_id":"536","dan":"0","tz_result":["28909"]},{"game_id":"537","dan":"0","tz_result":["28963"]}]',
+  'user_id' => '13',
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\home\controller\Order->get_tz_num[ D:\phpStudy\WWW\cp\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010352s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game_cate` [ RunTime:0.005547s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28804 ) LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_code` [ RunTime:0.004652s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=2 ) [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_win" ) LIMIT 1 [ RunTime:0.005744s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_eq" ) LIMIT 1 [ RunTime:0.005612s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_lose" ) LIMIT 1 [ RunTime:0.005602s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28855 ) LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005649s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005675s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005620s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28909 ) LIMIT 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005737s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005647s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005741s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28804 ) LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=2 ) [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_win" ) LIMIT 1 [ RunTime:0.005614s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_eq" ) LIMIT 1 [ RunTime:0.005640s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_lose" ) LIMIT 1 [ RunTime:0.005647s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28855 ) LIMIT 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005622s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005623s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005673s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28963 ) LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005658s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005749s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005677s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28804 ) LIMIT 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=2 ) [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_win" ) LIMIT 1 [ RunTime:0.005604s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_eq" ) LIMIT 1 [ RunTime:0.005633s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=534 and cate_code="let_score_home_lose" ) LIMIT 1 [ RunTime:0.005598s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28909 ) LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005629s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005744s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005668s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28963 ) LIMIT 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005615s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005696s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005656s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28855 ) LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000178s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005628s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005625s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=535 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005721s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28909 ) LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005734s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005627s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=536 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005568s ]
+[ sql ] [ SQL ] SELECT `game_id`,`cate_code` FROM `fb_game_cate` WHERE  (  cate_id=28963 ) LIMIT 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `fb_code` WHERE  (  code="home_win" ) LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT `code` FROM `fb_code` WHERE  (  code_pid=1 ) [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_win" ) LIMIT 1 [ RunTime:0.005790s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_eq" ) LIMIT 1 [ RunTime:0.005668s ]
+[ sql ] [ SQL ] SELECT `cate_odds` FROM `fb_game_cate` WHERE  (  game_id=537 and cate_code="home_lose" ) LIMIT 1 [ RunTime:0.005602s ]
