@@ -178,9 +178,17 @@ class Order extends Base
     {
         $_data = $_REQUEST;
 
+//         $_data = array (
+//   'chuan' => '3',
+//   'game_cate' => '1',
+//   'multiple' => '1',
+//   'tz' => '[{"game_id":"375","dan":"0","tz_result":["20215"]},{"game_id":"376","dan":"0","tz_result":["20269"]},{"game_id":"549","dan":"0","tz_result":["29611","29633","29650","29659"]}]',
+//   'user_id' => '3',
+// );
         $data['multiple'] = $_data['multiple'];
         $data['chuan'] = $_data['chuan'];
         $data['tz'] = json_decode($_data['tz'],true);
+
         if(empty($_data['game_cate'])){
             echo json_encode(['msg'=>'请传入游戏类型','code'=>1105,'success'=>false]);
             exit;
@@ -200,7 +208,21 @@ class Order extends Base
         }else{
             $game_cate = 'nba';
         }
-
+        
+        // $tz = $data['tz'];
+        // foreach ($data['tz'] as $key => $value) {
+        //     $tz = $data['tz'][$key]['tz_result'];
+        //     if($tz > 1){
+        //         foreach ($tz as $k => $v) {
+        //             $tz[$k] = db($game_cate.'_game_cate gc')
+        //                 ->field('gc.cate_id,gc.cate_odds,c.code_pid')
+        //                 ->join($game_cate.'_code c','gc.cate_code=c.code','LEFT')
+        //                 ->where('gc.cate_id='.$tz[$k] )
+        //                 ->find();
+        //         }
+        //     }
+        // }
+        // dump($tz);die;
         $Group = new Group();
         // 预计中奖金额
         $chuan = explode(',', $data['chuan']);
@@ -210,46 +232,16 @@ class Order extends Base
                 $order_tz_data[] = $group_data[$k];
             }
         }
-
-        if(count($order_tz_data) > 1){
-            $order_total_odds = 0;
-            foreach ($order_tz_data as $key => $value) {
-                $tz_data = explode(',', $order_tz_data[$key]);
-                $order_tz_odds = 1;
-                if(count($tz_data) > 1){
-                    foreach ($tz_data as $k => $v) {
-                        $cate_code = db($game_cate.'_game_cate')->field('game_id,cate_code')->where('cate_id='.$tz_data[$k])->find();
-                        $code_pid = db($game_cate.'_code')->where('code="'.$cate_code['cate_code'].'"')->value('code_pid');
-                        $code = db($game_cate.'_code')->where('code_pid='.$code_pid)->column('code');
-                        for ($i=0; $i < count($code); $i++) { 
-                            $cate_odds[$i] = db($game_cate.'_game_cate')->where('game_id='.$cate_code['game_id'].' and cate_code="'.$code[$i].'"')->value('cate_odds');
-                        }
-                        $order_tz_odds *= max($cate_odds);
-                    }
-                    $order_total_odds += $order_tz_odds;
-                }else{
-                    $cate_code = db($game_cate.'_game_cate')->field('game_id,cate_code')->where('cate_id='.$order_tz_data[$key])->find();
-                    $code_pid = db($game_cate.'_code')->where('code="'.$cate_code['cate_code'].'"')->value('code_pid');
-                    $code = db($game_cate.'_code')->where('code_pid='.$code_pid)->column('code');
-                    for ($i=0; $i < count($code); $i++) { 
-                        $cate_odds[$i] = db($game_cate.'_game_cate')->where('game_id='.$cate_code['game_id'].' and cate_code="'.$code[$i].'"')->value('cate_odds');
-                    }
-                    $order_total_odds += max($cate_odds);
-                }
-            }
-        }else{
-            $order_total_odds = 1;
-            $tz_data = explode(',', $order_tz_data[0]);
+        
+        foreach ($order_tz_data as $key => $value) {
+            $tz_data = explode(',', $order_tz_data[$key]);
+            $order_tz_odds[$key] = 1;
             foreach ($tz_data as $k => $v) {
-                $cate_code = db($game_cate.'_game_cate')->field('game_id,cate_code')->where('cate_id='.$tz_data[$k])->find();
-                $code_pid = db($game_cate.'_code')->where('code="'.$cate_code['cate_code'].'"')->value('code_pid');
-                $code = db($game_cate.'_code')->where('code_pid='.$code_pid)->column('code');
-                for ($i=0; $i < count($code); $i++) { 
-                    $cate_odds[$i] = db($game_cate.'_game_cate')->where('game_id='.$cate_code['game_id'].' and cate_code="'.$code[$i].'"')->value('cate_odds');
-                }
-                $order_total_odds *= max($cate_odds);
+                $tz_odds = db($game_cate.'_game_cate')->where('cate_id='.$tz_data[$k])->value('cate_odds');
+                $order_tz_odds[$key] *= $tz_odds;
             }
         }
+        $order_total_odds = max($order_tz_odds);
         // 预计中奖金额 end
         /*****获取注数*****/
         $tz_num = $Group->tz_num($data);
