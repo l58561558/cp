@@ -334,6 +334,21 @@ class Order extends Base
             $data['bd_num'] = $order_hm_desc['bd_num'];       // 保底份数
             $data['one_money'] = $order_hm_desc['one_money'];       // 保底份数
         }
+        if($order['order_type'] == 3){
+            $order_gd_desc = db('order_gd_desc ohd')
+                        ->field('u.user_name,ohd.gd_money,ohu.one_money,ohd.total_win_money,ohd.brokerage,ohu.pay_num,ohu.pay_money')
+                        ->join('order_gd_user ohu','ohd.gd_id=ohu.gd_id')
+                        ->join('user u','u.id=ohd.user_id')
+                        ->where('ohu.order_id='.$order['order_id'].' and ohu.user_id='.$order['user_id'])
+                        ->find();
+            $data['user_name'] = $order_gd_desc['user_name']; // 发起人昵称
+            $data['gd_desc'] = $order_gd_desc['gd_money'];    // 方案总金额
+            $data['total_win_money'] = $order_gd_desc['total_win_money']; // 方案总中奖
+            $data['brokerage'] = $order_gd_desc['brokerage']; // 佣金比列
+            $data['pay_num'] = $order_gd_desc['pay_num'];     // 我的认购份数
+            $data['pay_money'] = $order_gd_desc['pay_money']; // 我的认购金额
+            $data['one_money'] = $order_gd_desc['one_money']; // 每份金额
+        }
 
         $order_info = db('order_info')->where('order_id='.$order_id)->select(); // 订单明细
         $data['order_id'] = $order['order_id']; // 订单ID
@@ -356,8 +371,8 @@ class Order extends Base
         $data['multiple'] = $order['multiple']; // 倍数
         $data['is_win'] = $order['is_win']; // 是否中奖
 
-        if($order['order_type'] == 1) $data['order_type'] = '普通订单';
-        if($order['order_type'] == 2) $data['order_type'] = '合买';
+        $data['order_type'] = db('code_info')->where('code_pid=11 and code="'.$order['order_type'].'"')->value('code_name');
+
         if($order['order_status'] == 1){
             $data['order_state'] = 2; // 订单状态(0:已作废|1:未付款|2:待开奖|3:未中奖|4.已中奖)
             if($order['is_win'] == 1){
