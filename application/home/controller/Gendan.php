@@ -110,16 +110,20 @@ class Gendan extends Base
         $order_arr['order_money'] = $order_money; // 订单金额
         $order_id = db('order')->insert($order_arr,false,true);
 
-        $db_name = $order['game_cate']==1?'fb_game':'nba_game';
+        if($order['game_cate'] == 1) $db_name = '`fb_game`';
+        if($order['game_cate'] == 2) $db_name = '`nba_game`';
+        if($order['game_cate'] >= 3) $db_name = '`fbo_game`';
         
         foreach ($touz as $key => $value) {
             $order_info[$key]['order_id'] = $order_id; // 订单ID
             $order_info[$key]['game_id'] = $touz[$key]['game_id']; // 比赛场次
             $order_info[$key]['dan'] = $touz[$key]['dan']; // 胆(0:未选中|1.选中)
             $order_info[$key]['tz_result'] = is_array($touz[$key]['tz_result'])?implode(',', $touz[$key]['tz_result']):$touz[$key]['tz_result']; // 投注内容
-            $touz[$key]['tz_result'] = is_array($touz[$key]['tz_result'])?$touz[$key]['tz_result']:explode(',', $touz[$key]['tz_result']);
-            foreach ($touz[$key]['tz_result'] as $ke => $val) {
-                $order_info[$key]['tz_odds'][$ke] = db($db_name.'_cate')->where('cate_id='.$touz[$key]['tz_result'][$ke])->value('cate_odds');
+            if($order['game_cate'] <= 2){
+                $touz[$key]['tz_result'] = is_array($touz[$key]['tz_result'])?$touz[$key]['tz_result']:explode(',', $touz[$key]['tz_result']);
+                foreach ($touz[$key]['tz_result'] as $ke => $val) {
+                    $order_info[$key]['tz_odds'][$ke] = db($db_name.'_cate')->where('cate_id='.$touz[$key]['tz_result'][$ke])->value('cate_odds');
+                }    
             }
             $order_info[$key]['tz_odds'] = implode(',', $order_info[$key]['tz_odds']);
             $order_info[$key]['game_status'] = 0; // 游戏状态(0:未结束|1:已结算)
@@ -130,9 +134,16 @@ class Gendan extends Base
         $order_info_res = db('order_info')->insertAll($order_info);
 
         // 获取当前订单中比赛截止时间最近的一场
-        $end_time = db($db_name)->where('id in ('.implode(",", $game_id).')')->column('`end_time`');
-        foreach ($end_time as $key => $value) {
-            $end_time[$key] = strtotime($end_time[$key]);
+        if($order['game_cate'] <= 2){
+            $end_time = db($db_name)->where('id in ('.implode(",", $game_id).')')->column('`end_time`');
+            foreach ($end_time as $key => $value) {
+                $end_time[$key] = strtotime($end_time[$key]);
+            }
+        }else{
+            $end_time = db($db_name)->where('id in ('.implode(",", $game_id).')')->column('`deadline`');
+            foreach ($end_time as $key => $value) {
+                $end_time[$key] = strtotime($end_time[$key]);
+            }
         }
         $min_time = date('Y-m-d H:i:s', min($end_time));
         $gd['order_id'] = $order_id; // 订单ID
