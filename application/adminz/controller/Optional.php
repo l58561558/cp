@@ -325,6 +325,7 @@ class Optional extends Base
         foreach ($order_lists as $oid => $ol) {
             $order = \db('order')->find($oid);
             $user = \db('user')->find($order['user_id']);
+            $award = 0;
             if ($order['game_cate'] == self::$GAME_TYPE_NINE_IN_DB && $ol['9_bonus_1_times']) {
                 $award = $ol['9_bonus_1_times'] * $bonus_nine_1 * $order['multiple'];
             }
