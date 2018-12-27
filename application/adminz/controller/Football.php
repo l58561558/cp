@@ -322,7 +322,7 @@ class Football extends Base
                 }else{
                     $win_result = explode(',', $order_info[$key]['win_result']);
                     foreach ($win_result as $ke => $val) {
-                        $win_result[$ke] = db('fb_game_cate')->field('cate_name,cate_odds,is_win')->where('cate_id='.$win_result[$ke])->find();
+                        $win_result[$ke] = db('fb_game_cate')->field('cate_id,cate_name,cate_odds,is_win')->where('cate_id='.$win_result[$ke])->find();
                     }
                     $data['order_info'][$key]['win_result'] = $win_result;                      
                 }  
