@@ -1,0 +1,82 @@
+<table class="layui-table table">
+    <!-- <colgroup>
+        <col width="150">
+        <col width="200">
+        <col>
+    </colgroup> -->
+    <thead>
+    <tr>
+        <th style="text-align: center;" style="width: 10px">期号</th>
+        <th style="text-align: center;" style="width: 10px">场次</th>
+        <th style="text-align: center;">赛事</th>
+        <th style="text-align: center;">比赛时间</th>
+        <th style="text-align: center;">主队</th>
+        <th style="text-align: center;">客队</th>
+        <th style="text-align: center;">比赛结果</th>
+        <th style="text-align: center;">停止投注时间</th>
+        <th style="text-align: center;">投注状态</th>
+        <th style="text-align: center;" style="width: 100px">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {volist name="_list" id="info" key='key'}
+    <tr>
+        <td style="text-align: center;">{$info.name}</td>
+        <td style="text-align: center;">{$info.competition|default='-'}</td>
+        <td style="text-align: center;">{$info.league_type|default='-'}</td>
+        <td style="text-align: center;">{$info.match_time|default='-'}</td>
+        <td style="text-align: center;">{$info.home|default='-'}</td>
+        <td style="text-align: center;">{$info.load|default='-'}</td>
+        <td style="text-align: center;">
+            <input style="text-align: center;"
+                   class="inputs"
+                   data-id="{$info.game_info_id}"
+                   data-url="{:url('optional/edit_match_result')}"
+                   name="match_result"
+                   type="text"
+                   value="{$info.match_result}"
+            >
+        </td>
+        <td style="text-align: center;">{$info.deadline|default='-'}</td>
+        <td style="text-align: center;">{$info.tz_status|default='-'}</td>
+
+        <td style="text-align: center;">
+            {if condition="$info.status neq 2"}
+            {if condition="$info.deadline <= time()"}
+            <a href="{:url('optional/settle_accounts_page')}?id={$info.fbo_game_id}" style="color: red">结算</a>&nbsp;&nbsp;&nbsp;
+            {/if}
+            {/if}
+            <!--<a href="{:url('optional/edit')}?id={$info.fbo_game_id}">编辑</a>&nbsp;&nbsp;&nbsp;-->
+            <!--<a href="{:url('optional/look')}?id={$info.fbo_game_id}">查看</a>&nbsp;&nbsp;&nbsp;-->
+            <!--<a style="color: red" href="{:url('optional/drop')}?id={$info.fbo_game_id}">删除</a>-->
+            <!--{if condition="$info.is_postpone eq 0"}-->
+            <!--<a data-id="{$info.fbo_game_id}" data-url="{:url('optional/edit_field')}" class="is_postpone" value="1"-->
+               <!--href="javascript:void(0)">延期</a>-->
+            <!--{/if}-->
+        </td>
+    </tr>
+    {/volist}
+    {empty name='_list'}
+    <tr>
+        <td colspan="15">空空如也~</td>
+    </tr>
+    {/empty}
+    </tbody>
+</table>
+<div class="box-footer clearfix">
+    <ul class="pagination pull-right">{$page}</ul>
+</div>
+<script type="text/javascript">
+    $(".is_postpone").click(function () {
+        var id = $(this).attr('data-id');
+        $.ajax({
+            url: "{:url('football/edit_field')}",
+            type: 'post',
+            data: {is_postpone: 1, id: id},
+            success: function (res) {
+                alert(res.msg);
+                window.location.reload();
+            }
+        })
+    })
+</script>

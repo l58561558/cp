@@ -1,0 +1,125 @@
+{extend name="public/base" /}
+{block name='css'}
+
+{/block}
+{block name="content"}
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">添加赛事</h3>
+                        <div class="pull-right">
+                            <a href="{:url('optional/index')}" class="btn btn-link btn-sm"><i class="fa fa-angle-double-left"></i>&nbsp;返回列表</a>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active" data-id="tab_base"><a href="javascript:;">基础信息</a></li>
+                    </ul>
+                    <form id="form_submit" enctype="multipart/form-data" class="layui-form layui-form-pane" action="{:url('optional/add')}" method="post">
+                        <div class="box-body" id="tab_base">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">期号</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="session" lay-verify="required" class="layui-input" placeholder="期号，例：1522" >
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">投注结束时间</label>
+                                <div class="layui-input-block">
+                                    <input type="text" id="date_deadline" name="deadline" lay-verify="required" class="layui-input" placeholder="投注结束时间" >
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">任十四一等奖金额</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="bonus_fourteen_1" lay-verify="" class="layui-input" placeholder="任十四一等奖金额，例5000000.00" >
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">任十四二等奖金额</label>
+                                <div class="layui-input-block">
+                                    <input type="text"  name="bonus_fourteen_2" lay-verify="" class="layui-input" placeholder="任十四二等奖金额，例5000000.00" >
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">任九一等奖金额</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="bonus_nine_1" lay-verify="" class="layui-input" placeholder="任九一等奖金额，例5000000.00" >
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">开奖时间</label>
+                                <div class="layui-input-block">
+                                    <input type="text" id="date_lottery_time" name="lottery_time" lay-verify="" class="layui-input" placeholder="开奖时间" >
+                                </div>
+                            </div>
+
+                            <h3 class="box-title">分场比赛详情</h3>
+                            {volist name='competition' id='item'}
+                            <div class="layui-form-item">
+                                <h5>第{$item}场比赛</h5>
+                                <div style="width: 160px;float: left;margin-bottom: 15px">
+                                    <label class="layui-form-label" style="width: 150px;">联赛类型</label>
+                                    <input style="width: 150px;text-align: center;" type="text" name="league_type_{$item}" lay-verify="required" placeholder="" class="layui-input">
+                                </div>
+                                <div style="width: 160px;float: left;margin-bottom: 15px">
+                                    <label class="layui-form-label" style="width: 150px;">开赛时间</label>
+                                    <input style="width: 150px;text-align: center;" type="text" id="match_time_{$item}" name="match_time_{$item}" lay-verify="required" placeholder="" class="layui-input">
+                                </div>
+                                <div style="width: 160px;float: left;margin-bottom: 15px">
+                                    <label class="layui-form-label" style="width: 150px;">主队</label>
+                                    <input style="width: 150px;text-align: center;" type="text" name="home_{$item}" lay-verify="required" placeholder="" class="layui-input">
+                                </div>
+                                <div style="width: 160px;float: left;margin-bottom: 15px">
+                                    <label class="layui-form-label" style="width: 150px;">客队</label>
+                                    <input style="width: 150px;text-align: center;" type="text" name="load_{$item}" lay-verify="required" placeholder="" class="layui-input">
+                                </div>
+                            </div>
+                            {/volist}
+                        </div>
+                        <div class="layui-input-block">
+                            <button type="submit" class="layui-btn">添加</button>
+                            <label for="jump_list" style="margin-left: 15px;"><input type="checkbox" data-url="{:url('optione/index')}" id="jump_list" value="1" >返回列表页</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}
+{block name="js"}
+<script>
+layui.use(['form', 'layedit', 'laydate','upload','table'], function(){
+    var form = layui.form
+    ,layer = layui.layer
+    ,layedit = layui.layedit
+    ,laydate = layui.laydate
+    ,upload = layui.upload;
+
+    var table = layui.table; 
+    //日期
+    laydate.render({
+        elem: '#date'
+        ,type: 'datetime'
+    });
+    laydate.render({
+        elem: '#date_lottery_time'
+        ,type: 'datetime'
+    });
+    laydate.render({
+        elem: '#date_deadline'
+        ,type: 'datetime'
+    });
+    laydate.render({
+        elem: '#match_time_1'
+        ,type: 'datetime'
+    });
+    laydate.render({
+        elem: '#cate_id'
+    });
+})
+</script>
+{/block}
+
+
