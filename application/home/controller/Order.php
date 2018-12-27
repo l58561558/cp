@@ -484,7 +484,7 @@ class Order extends Base
                 $data['order_info'][$key]['win_result'] = []; // 中奖内容
                 // dump($order_info[$key]['tz_result']);
                 if(!empty($order_info[$key]['tz_result'])){
-                    $tz_result = str_split($order_info[$key]['tz_result']);
+                    $tz_result = explode(',', $order_info[$key]['tz_result']);
                     foreach ($tz_result as $ke => $val) {
                         $tz_res[$ke]['cate_id'] = 0;
                         $tz_res[$ke]['game_id'] = 0;
@@ -510,7 +510,7 @@ class Order extends Base
                     $data['order_info'][$key]['tz_result'] = $tz_res;
                 }
                 if(!empty($order_info[$key]['win_result'])){
-                    $win_result = str_split($order_info[$key]['win_result']);
+                    $win_result = explode(',', $order_info[$key]['win_result']);
                     $win_result = array_unique($win_result);
                     $win_result = array_values($win_result);
                     foreach ($win_result as $ke => $val) {
