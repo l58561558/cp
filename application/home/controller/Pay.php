@@ -21,9 +21,13 @@ class Pay extends Base
 
         $price = $data["price"];
         if(isset($data['type'])){
-            $type = $data["type"];
+            if(is_string($data['type'])){
+                $type = substr($data['type'], 0, 1);
+            }else{
+                $type = $data['type'];
+            }
         }else{
-            $type = 2;
+            $type = 1;
         }
         
         $user_id = $data["user_id"];

@@ -86,12 +86,12 @@ class AccountDetails extends Base
             $where .= ' and add_time<="'.$data['end_time'].'"';
         }
         
-        // $user_id_arr = db('user')->where('status=1')->column('id');
-        // if(!empty($user_id_arr)){
-        //     $user_ids = implode(',', $user_id_arr);
-        //     $where .= ' and user_id not in ('.$user_ids.')';
-        //     $map .= ' and user_id not in ('.$user_ids.')';
-        // }
+        $user_id_arr = db('user')->where('status=1')->column('id');
+        if(!empty($user_id_arr)){
+            $user_ids = implode(',', $user_id_arr);
+            $where .= ' and user_id not in ('.$user_ids.')';
+            $map .= ' and user_id not in ('.$user_ids.')';
+        }
 
         $statistics['cz_money'] = db('account_details')->where('deal_cate=1 and pay_status=1'.$where)->sum('deal_money');
         $statistics['tx_money'] = db('account_details')->where('deal_cate=2 and present_status=3'.$where)->sum('deal_money');
