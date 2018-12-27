@@ -1,9 +1,16 @@
 <?php
 namespace app\home\controller;
-
+use think\Db;
+use think\Log;
 //用户登录注册控制器
 class Pay extends Base
 {
+    function __construct(){
+        Log::init([
+            'type' =>  'File',
+            'path' =>  LOG_PATH,
+        ]);
+    }
     public function pay()
     {
         return view();
@@ -84,6 +91,7 @@ class Pay extends Base
 
     public function paynotify($type)
     {	
+        Log::write($type);
     /**
      * ---------------------通知异步回调接收页-------------------------------
      * 

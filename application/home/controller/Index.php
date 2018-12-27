@@ -28,18 +28,18 @@ class Index extends Base
     	$Group->get_group();
     }
 
-    public function version($type,$version)
-    {
-        $type = strtoupper($type);
-        $versions = db('versions')->where('type="'.$type.'"')->find();
-        $version = str_replace('.', '', $version);
-        $versions['version'] = str_replace('.', '', $versions['version']);
-        if($versions['version'] != $version){
-            echo json_encode(['msg'=>'请更新','code'=>1,'success'=>true,'download'=>$versions['download']]);
-            exit;
-        }else{
-            echo json_encode(['msg'=>'不用更新了','code'=>0,'success'=>false]);
-            exit;
-        }
-    }
+    // public function version($type,$version)
+    // {
+    //     $type = strtoupper($type);
+    //     $versions = db('versions')->where('type="'.$type.'"')->find();
+    //     $version = str_replace('.', '', $version);
+    //     $versions['version'] = str_replace('.', '', $versions['version']);
+    //     if($versions['version'] != $version){
+    //         echo json_encode(['msg'=>'请更新','code'=>1,'success'=>true,'download'=>$versions['download']]);
+    //         exit;
+    //     }else{
+    //         echo json_encode(['msg'=>'不用更新了','code'=>0,'success'=>false]);
+    //         exit;
+    //     }
+    // }
 }
