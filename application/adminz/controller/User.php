@@ -86,10 +86,14 @@ class User extends Base
         
         $count = db("user")->where($map)->order('reg_time')->order('reg_time','desc')->count();
         $list = db("user")->where($map)->order('reg_time')->order('reg_time','desc')->paginate(20,$count);
+        // dump($list);die;
         //获取分页
         $page = $list->render();
         //遍历数据
         $list->each(function($item,$key){
+            if($item['pid'] > 0){
+                $item['p_user'] = db("user")->where('id='.$item['pid'])->value('user_name');
+            }
             // $item['role_name'] = db("Role")->where("role_id=".$item['role_id'])->value('role_name');
             $item['phone'] = $item['phone'];
             if(!empty($item['is_invite'])){

@@ -579,20 +579,23 @@ class Football extends Base
                             }
                         }else if($order['order_type'] == 3){
                             $one_win_money = $win_money / $order['multiple'];
-
-                            // 将方案中奖金额添加  
-                            db('order_gd_desc')->where('gd_id='.$order_gd_desc['gd_id'])->update(array('total_win_money'=>$one_win_money));
-
                             // 获取跟单信息
                             $order_gd_user = db('order_gd_user')->where('order_id='.$order_ids[$key])->find();
                             $order_gd_desc = db('order_gd_desc')->where('gd_id='.$order_gd_user['gd_id'])->find();
+
+                            // 将方案中奖金额添加  
+                            db('order_gd_desc')->where('gd_id='.$order_gd_desc['gd_id'])->update(array('total_win_money'=>$one_win_money));
 
                             $win_money = $one_win_money * $order_gd_user['pay_num'];
 
                             if($order_gd_user['user_id'] != $order_gd_desc['user_id']){
                                 /********* 将佣金发放给发起人 *********/
                                 $commission = $win_money * $order_gd_desc['brokerage']; 
+                                // 扣除佣金
+                                $win_money = $win_money - $commission;
+
                                 $commission = $commission * 0.7;
+                                
                                 $res = $Detail->add_detail($order_gd_desc['user_id'], 8, $commission, 1);
                                 /**添加明细**/
                                 if($res > 0){
@@ -604,8 +607,7 @@ class Football extends Base
                                     Db::rollback();
                                 }
                                 /********* 将佣金发放给发起人 END *********/
-                                // 扣除佣金
-                                $win_money = $win_money - $commission;
+                                
                             }
                             // 订单生效 将应分金额添加到列表数据中
                             db('order_gd_user')->where('gd_user_id='.$order_gd_user['gd_user_id'])->setField('win_money',$win_money);

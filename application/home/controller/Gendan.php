@@ -323,6 +323,7 @@ class Gendan extends Base
 
         if(!empty($list)){
             foreach ($list as $key => $value) {
+                $order_gd_user = db('order_gd_user')->where('gd_id='.$list[$key]['gd_id'].' and user_id='.$list[$key]['user_id'])->find();
                 $data[$key]['user_id'] = $list[$key]['user_id'];
                 $data[$key]['order_id'] = $list[$key]['order_id'];
                 $data[$key]['gd_id'] = $list[$key]['gd_id'];
@@ -331,12 +332,13 @@ class Gendan extends Base
                 if(empty($data[$key]['user_name'])){
                     $data[$key]['user_name'] = db('user')->where('id='.$list[$key]['user_id'])->value('phone');
                 }
+                $data[$key]['gd_status'] = $list[$key]['gd_status'];
                 $data[$key]['end_time'] = $list[$key]['end_time'];
                 $data[$key]['gd_title'] = $list[$key]['gd_title'];
                 $data[$key]['game_cate'] = $list[$key]['game_cate']==1?'竞彩足球':'竞彩篮球';
-                $data[$key]['pay_money'] = $list[$key]['pay_money']; // 自购金额
-                $data[$key]['pay_num'] = $list[$key]['pay_num'];
-                $data[$key]['one_money'] = $list[$key]['one_money'];
+                $data[$key]['pay_money'] = $order_gd_user['pay_money'];
+                $data[$key]['pay_num'] = $order_gd_user['pay_num'];
+                $data[$key]['one_money'] = $list[$key]['gd_money'];
             }    
         }
         
@@ -348,10 +350,12 @@ class Gendan extends Base
     public function gendan_desc($gd_id)
     {
         $order_gd_desc = db('order_gd_desc')->where('gd_id='.$gd_id)->find();
+        $order_gd_user = db('order_gd_user')->where('gd_id='.$order_gd_desc['gd_id'].' and user_id='.$order_gd_desc['user_id'])->find();
         $data['gd_id'] = $order_gd_desc['gd_id'];
         $data['order_id'] = $order_gd_desc['order_id'];
-        $data['gd_money'] = $order_gd_desc['gd_money']; // 自购金额
-        $data['one_money'] = $order_gd_desc['one_money']; // 每份价格
+        $data['pay_money'] = $order_gd_user['pay_money']; // 自购金额
+        $data['pay_num'] = $order_gd_user['pay_num'];
+        $data['one_money'] = $order_gd_desc['gd_money']; // 每份价格
         $data['game_cate'] = $order_gd_desc['game_cate']==1?'竞彩足球':'竞彩篮球'; // 比赛分类
         $data['brokerage'] = ($order_gd_desc['brokerage']*100).'%'; // 佣金
         $data['gd_status'] = $order_gd_desc['gd_status']; // 跟单状态:(0.作废|1.进行中|2.已出票)
@@ -389,6 +393,7 @@ class Gendan extends Base
             $win_num = 0;
             foreach ($list as $key => $value) {
                 $order = db('order')->where('order_id='.$list[$key]['order_id'])->find();
+                $order_gd_user = db('order_gd_user')->where('gd_id='.$list[$key]['gd_id'].' and user_id='.$list[$key]['user_id'])->find();
                 if($order['is_win'] == 1){
                     $win_num += 1;
                 }
@@ -404,9 +409,9 @@ class Gendan extends Base
                 $data[$key]['end_time'] = $list[$key]['end_time'];
                 $data[$key]['gd_title'] = $list[$key]['gd_title'];
                 $data[$key]['game_cate'] = $list[$key]['game_cate']==1?'竞彩足球':'竞彩篮球';
-                $data[$key]['gd_money'] = $list[$key]['gd_money']; // 自购金额
-                $data[$key]['one_money'] = $list[$key]['one_money'];
-                $data[$key]['win_money'] = $order['win_money'];
+                $data[$key]['pay_money'] = $order_gd_user['pay_money'];
+                $data[$key]['pay_num'] = $order_gd_user['pay_num'];
+                $data[$key]['one_money'] = $list[$key]['gd_money'];
             }
             $win_odds = round($win_num/$count, 2);
             $dataa['head_img'] = db('user')->where('id='.$_data['usr_id'])->value('head_img');

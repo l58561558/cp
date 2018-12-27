@@ -11,9 +11,14 @@ class Pay extends Base
     public function set_pay()
     {
         $data = $_REQUEST;
+
         $price = $data["price"];
-        // $type = $data["type"];
-        $type = 2;
+        if(isset($data['type'])){
+            $type = $data["type"];
+        }else{
+            $type = 2;
+        }
+        
         $user_id = $data["user_id"];
 
         $yh = db('user')->where('id="'.$user_id.'"')->find();

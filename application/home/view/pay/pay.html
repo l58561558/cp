@@ -24,9 +24,10 @@ function pay()
 	var data = GetRequest();
 	var user_id = data.user_id;
 	var price = data.price;
+	var type = data.type;
 	$.ajax({
 		url:"{:url('pay/set_pay')}",
-		data:{user_id:user_id,price:price},
+		data:{user_id:user_id,price:price,type:type},
 		type:'post',
 		success:function(res){
 			var dataa = JSON.parse(res);
