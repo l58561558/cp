@@ -124,8 +124,9 @@ class Gendan extends Base
                 foreach ($touz[$key]['tz_result'] as $ke => $val) {
                     $order_info[$key]['tz_odds'][$ke] = db($db_name.'_cate')->where('cate_id='.$touz[$key]['tz_result'][$ke])->value('cate_odds');
                 }    
+                $order_info[$key]['tz_odds'] = implode(',', $order_info[$key]['tz_odds']);
             }
-            $order_info[$key]['tz_odds'] = implode(',', $order_info[$key]['tz_odds']);
+            
             $order_info[$key]['game_status'] = 0; // 游戏状态(0:未结束|1:已结算)
             $order_info[$key]['add_time'] = date('Y-m-d H:i:s'); // 下单时间
             $order_info[$key]['game_cate'] = $order['game_cate']; // 比赛类型

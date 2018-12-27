@@ -209,6 +209,11 @@ class Order extends Base
             $game_cate = 'nba';
         }
         
+        $Group = new Group();
+        /*****获取注数*****/
+        $tz_num = $Group->tz_num($data);
+        /*****获取注数*****/
+
         foreach ($data['tz'] as $key => $value) {
             $tz = $data['tz'][$key]['tz_result'];
             if($tz > 1){
@@ -247,7 +252,6 @@ class Order extends Base
             }
         }
 
-        $Group = new Group();
         // 预计中奖金额
         $chuan = explode(',', $data['chuan']);
         foreach ($chuan as $key => $value) {
@@ -269,9 +273,7 @@ class Order extends Base
         }
         // $order_total_odds = max($order_tz_odds);
         // 预计中奖金额 end
-        /*****获取注数*****/
-        $tz_num = $Group->tz_num($data);
-        /*****获取注数*****/
+        
 
         $order_money = $tz_num*2;
         $order_win_money = round($order_total_odds,2)*$data['multiple']*2;
@@ -411,63 +413,131 @@ class Order extends Base
 
             if($order_info[$key]['game_cate'] == 1){
                 $game_cate = 'fb_game';
-            }else{
+            }else if($order_info[$key]['game_cate'] == 2){
                 $game_cate = 'nba_game';
-            }
-
-            $game[$key] = db($game_cate)->where('id='.$order_info[$key]['game_id'])->find();
-            $data['order_info'][$key]['week'] = $game[$key]['week']; // 周几
-            $data['order_info'][$key]['game_no'] = $game[$key]['game_no']; // 比赛编号
-            $data['order_info'][$key]['dan'] = $order_info[$key]['dan']; // 比赛编号
-
-            if($order_info[$key]['game_cate'] == 1){
-                $data['order_info'][$key]['down_score'] = $game[$key]['down_score']; // 最终比分
             }else{
-                $data['order_info'][$key]['down_score'] = $game[$key]['home_score'].':'.$game[$key]['road_score']; // 最终比分
-            }
-            
-            $data['order_info'][$key]['home_team'] = $game[$key]['home_team']; // 主队名称
-            $data['order_info'][$key]['road_team'] = $game[$key]['road_team']; // 客队名称
-            $data['order_info'][$key]['win_result'] = []; // 中奖内容
-
-            $tz_result = explode(',', $order_info[$key]['tz_result']);
-            $tz_odds = explode(',', $order_info[$key]['tz_odds']);
-            
-            if(!empty($order_info[$key]['tz_result'])){
-                foreach ($tz_result as $ke => $val) {
-                    $gc = db($game_cate.'_cate')->where('cate_id='.$tz_result[$ke])->find();
-                    if(in_array($gc['cate_code'], $let_arr)){
-	                    $let_score = db($game_cate)->where('id='.$gc['game_id'])->value('let_score');
-	                    $gc['cate_name'] .= '('.$let_score.')';
-	                }
-	                if(in_array($gc['cate_code'], $total_arr)){
-	                    $total_score = db($game_cate)->where('id='.$gc['game_id'])->value('total_score');
-	                    $gc['cate_name'] .= '('.$total_score.')';
-	                }
-                    $tz_result[$ke] = $gc;
-                    $tz_result[$ke]['cate_odds'] = $tz_odds[$ke];
-                }
-                $data['order_info'][$key]['tz_result'] = $tz_result;
+                $game_cate = 'fbo_game_info';
             }
 
-            if(!empty($order_info[$key]['win_result'])){
-                $win_result = explode(',', $order_info[$key]['win_result']);
-                $win_result = array_unique($win_result);
-                $win_result = array_values($win_result);
-                foreach ($win_result as $ke => $val) {
-                    $gc = db($game_cate.'_cate')->where('cate_id='.$win_result[$ke])->find();
-                    if(in_array($gc['cate_code'], $let_arr)){
-	                    $let_score = db($game_cate)->where('id='.$gc['game_id'])->value('let_score');
-	                    $gc['cate_name'] .= '('.$let_score.')';
-	                }
-	                if(in_array($gc['cate_code'], $total_arr)){
-	                    $total_score = db($game_cate)->where('id='.$gc['game_id'])->value('total_score');
-	                    $gc['cate_name'] .= '('.$total_score.')';
-	                }
-                    $win_result[$ke] = $gc;
+            if($order_info[$key]['game_cate'] <= 2){
+                $game[$key] = db($game_cate)->where('id='.$order_info[$key]['game_id'])->find();
+                $data['order_info'][$key]['week'] = $game[$key]['week']; // 周几
+                $data['order_info'][$key]['game_no'] = $game[$key]['game_no']; // 比赛编号
+                $data['order_info'][$key]['dan'] = $order_info[$key]['dan']; // 胆
+
+                if($order_info[$key]['game_cate'] == 1){
+                    $data['order_info'][$key]['down_score'] = $game[$key]['down_score']; // 最终比分
+                }else{
+                    $data['order_info'][$key]['down_score'] = $game[$key]['home_score'].':'.$game[$key]['road_score']; // 最终比分
                 }
                 
-                $data['order_info'][$key]['win_result'] = $win_result;                      
+                $data['order_info'][$key]['home_team'] = $game[$key]['home_team']; // 主队名称
+                $data['order_info'][$key]['road_team'] = $game[$key]['road_team']; // 客队名称
+                $data['order_info'][$key]['win_result'] = []; // 中奖内容
+
+                if(!empty($order_info[$key]['tz_result'])){
+                    $tz_result = explode(',', $order_info[$key]['tz_result']);
+                    $tz_odds = explode(',', $order_info[$key]['tz_odds']);
+                    foreach ($tz_result as $ke => $val) {
+                        $gc = db($game_cate.'_cate')->where('cate_id='.$tz_result[$ke])->find();
+                        if(in_array($gc['cate_code'], $let_arr)){
+    	                    $let_score = db($game_cate)->where('id='.$gc['game_id'])->value('let_score');
+    	                    $gc['cate_name'] .= '('.$let_score.')';
+    	                }
+    	                if(in_array($gc['cate_code'], $total_arr)){
+    	                    $total_score = db($game_cate)->where('id='.$gc['game_id'])->value('total_score');
+    	                    $gc['cate_name'] .= '('.$total_score.')';
+    	                }
+                        $tz_result[$ke] = $gc;
+                        $tz_result[$ke]['cate_odds'] = $tz_odds[$ke];
+                    }
+                    $data['order_info'][$key]['tz_result'] = $tz_result;
+                }
+
+                if(!empty($order_info[$key]['win_result'])){
+                    $win_result = explode(',', $order_info[$key]['win_result']);
+                    $win_result = array_unique($win_result);
+                    $win_result = array_values($win_result);
+                    foreach ($win_result as $ke => $val) {
+                        $gc = db($game_cate.'_cate')->where('cate_id='.$win_result[$ke])->find();
+                        if(in_array($gc['cate_code'], $let_arr)){
+    	                    $let_score = db($game_cate)->where('id='.$gc['game_id'])->value('let_score');
+    	                    $gc['cate_name'] .= '('.$let_score.')';
+    	                }
+    	                if(in_array($gc['cate_code'], $total_arr)){
+    	                    $total_score = db($game_cate)->where('id='.$gc['game_id'])->value('total_score');
+    	                    $gc['cate_name'] .= '('.$total_score.')';
+    	                }
+                        $win_result[$ke] = $gc;
+                    }
+                    
+                    $data['order_info'][$key]['win_result'] = $win_result;                      
+                }             
+            }else{
+                $game[$key] = db($game_cate)->where('id='.$order_info[$key]['game_id'])->find();
+                $data['order_info'][$key]['week'] = '';
+                $data['order_info'][$key]['game_no'] = $game[$key]['competition']; // 比赛编号
+                $data['order_info'][$key]['dan'] = $order_info[$key]['dan']; // 胆
+                $data['order_info'][$key]['home_team'] = $game[$key]['home']; // 主队名称
+                $data['order_info'][$key]['road_team'] = $game[$key]['load']; // 客队名称
+                $data['order_info'][$key]['tz_result'] = []; // 中奖内容
+                $data['order_info'][$key]['win_result'] = []; // 中奖内容
+                // dump($order_info[$key]['tz_result']);
+                if(!empty($order_info[$key]['tz_result'])){
+                    $tz_result = str_split($order_info[$key]['tz_result']);
+                    foreach ($tz_result as $ke => $val) {
+                        $tz_res[$ke]['cate_id'] = 0;
+                        $tz_res[$ke]['game_id'] = 0;
+                        $tz_res[$ke]['cate_code'] = '';
+                        $tz_res[$ke]['cate_odds'] = '';
+                        $tz_res[$ke]['status'] = 0;
+                        $tz_res[$ke]['is_win'] = 0;
+                        
+                        if($tz_result[$ke] == 3) $tz_res[$ke]['cate_name'] = '胜';
+                        if($tz_result[$ke] == 1) $tz_res[$ke]['cate_name'] = '平';
+                        if($tz_result[$ke] == 0) $tz_res[$ke]['cate_name'] = '负';
+                    }
+                    $data['order_info'][$key]['tz_result'] = $tz_res;
+                }
+                if($order_info[$key]['tz_result'] == '0'){
+                    $tz_res[0]['cate_id'] = 0;
+                    $tz_res[0]['game_id'] = 0;
+                    $tz_res[0]['cate_code'] = '';
+                    $tz_res[0]['cate_odds'] = '';
+                    $tz_res[0]['status'] = 0;
+                    $tz_res[0]['is_win'] = 0;
+                    $tz_res[0]['cate_name'] = '负';
+                    $data['order_info'][$key]['tz_result'] = $tz_res;
+                }
+                if(!empty($order_info[$key]['win_result'])){
+                    $win_result = str_split($order_info[$key]['win_result']);
+                    $win_result = array_unique($win_result);
+                    $win_result = array_values($win_result);
+                    foreach ($win_result as $ke => $val) {
+                        $win_res[$ke]['cate_id'] = 0;
+                        $win_res[$ke]['game_id'] = 0;
+                        $win_res[$ke]['cate_code'] = '';
+                        $win_res[$ke]['cate_odds'] = '';
+                        $win_res[$ke]['status'] = 0;
+                        $win_res[$ke]['is_win'] = 0;
+                        
+                        if($win_result[$ke] == 3) $win_res[$ke]['cate_name'] = '胜';
+                        if($win_result[$ke] == 1) $win_res[$ke]['cate_name'] = '平';
+                        if($win_result[$ke] == 0) $win_res[$ke]['cate_name'] = '负';
+                    }
+                    $data['order_info'][$key]['win_result'] = $win_res;
+                }
+                if($order_info[$key]['win_result'] == '0'){
+                    $win_res[0]['cate_id'] = 0;
+                    $win_res[0]['game_id'] = 0;
+                    $win_res[0]['cate_code'] = '';
+                    $win_res[0]['cate_odds'] = '';
+                    $win_res[0]['status'] = 0;
+                    $win_res[0]['is_win'] = 0;
+                    $win_res[0]['cate_name'] = '负';
+                    $data['order_info'][$key]['win_result'] = $win_res;
+                }
+
             }
         }        	
 
