@@ -250,7 +250,7 @@ class Games extends Base {
 						->where('end_time="'.$nba_game['end_time'].'"')
 						->value('id');
 					if(!empty($id) && $id >0){
-						continue;
+						// continue;
 						$nba_game_cate['road_win']           = !isset($game_info[1][0])?0:$game_info[1][0];
 		                $nba_game_cate['home_win']           = !isset($game_info[1][1])?0:$game_info[1][1];
 		                $nba_game_cate['let_score_road_win'] = !isset($game_info[2][1])?0:$game_info[2][1];
@@ -340,6 +340,7 @@ class Games extends Base {
     				continue;
     			}	
     		}
+    		echo 'OK';
     	}
     }
     /**
