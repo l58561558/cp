@@ -56,7 +56,7 @@ class Optional extends Base
 
         $info = db('fbo_game_info')
             ->where('fbo_game_id', '=', $game['id'])
-            ->field('id as fbo_info_id,league_type,match_time,home,load')
+            ->field('id as fbo_info_id,league_type,match_time,home,load,competition')
             ->select();
         $result = [
             'game_id' => $game['id'],

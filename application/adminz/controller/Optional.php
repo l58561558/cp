@@ -86,13 +86,15 @@ class Optional extends Base
             'status' => 0,
         ];
         if (!empty($data['session'])) {
-            $has_session = \db('fbo_game')->where('session')->find();
+            $has_session = \db('fbo_game')->where('session', '=', $data['session'])->find();
             if ($has_session) {
+                Db::rollback();
                 $this->error('当期已存在');
             }
             $game['session'] = $data['session'];
             $game['name'] = $data['session'] . '期';
         } else {
+            Db::rollback();
             $this->error('缺失必要参数：session');
         }
         if (!empty($data['lottery_time'])) {
@@ -113,6 +115,10 @@ class Optional extends Base
             $game['bonus_nine_1'] = $data['bonus_nine_1'];
         }
         $game_insert = \db('fbo_game')->insert($game);
+        if (!$game_insert) {
+            Db::rollback();
+            $this->error("数据库保存失败");
+        }
         $game_id = db()->getLastInsID();
 
 
@@ -120,7 +126,6 @@ class Optional extends Base
         for ($i = 1; $i < 15; $i++) {
             $competition[$i]['competition'] = $i;
             $competition[$i]['fbo_game_id'] = $game_id;
-//            $competition[] = $i;
             $temp_str = 'league_type_' . $i;
             if (!empty($data[$temp_str])) {
                 $competition[$i]['league_type'] = $data[$temp_str];
@@ -147,11 +152,9 @@ class Optional extends Base
             }
         }
         $game_info = \db('fbo_game_info')->insertAll($competition);
-        dump($game_id);
-        dump($game_info);
-
         if (!$game_id || $game_info != 14) {
             Db::rollback();
+            $this->success("保存失败");
         }
         Db::commit();
         $this->success("保存成功");
