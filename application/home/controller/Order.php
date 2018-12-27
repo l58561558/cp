@@ -182,7 +182,7 @@ class Order extends Base
 //   'chuan' => '3',
 //   'game_cate' => '1',
 //   'multiple' => '1',
-//   'tz' => '[{"game_id":"375","dan":"0","tz_result":["20215"]},{"game_id":"376","dan":"0","tz_result":["20269"]},{"game_id":"549","dan":"0","tz_result":["29611","29633","29650","29659"]}]',
+//   'tz' => '[{"game_id":"375","dan":"0","tz_result":["20215"]},{"game_id":"376","dan":"0","tz_result":["20269"]},{"game_id":"549","dan":"0","tz_result":["29611","29612","29633","29650","29659"]}]',
 //   'user_id' => '3',
 // );
         $data['multiple'] = $_data['multiple'];
@@ -209,7 +209,6 @@ class Order extends Base
             $game_cate = 'nba';
         }
         
-        $tz = $data['tz'];
         foreach ($data['tz'] as $key => $value) {
             $tz = $data['tz'][$key]['tz_result'];
             if($tz > 1){
@@ -219,10 +218,35 @@ class Order extends Base
                         ->join($game_cate.'_code c','gc.cate_code=c.code','LEFT')
                         ->where('gc.cate_id='.$tz[$k] )
                         ->find();
+                    $cate_id[$k] = $tz[$k]['cate_id'];
+                    $code_pid[$k] = $tz[$k]['code_pid'];
+                    $cate_odds[$k] = $tz[$k]['cate_odds'];
                 }
+                // 获取去掉重复数据的数组 
+                $unique_arr = array_unique ( $code_pid ); 
+                // 获取重复数据的数组 
+                $repeat_arr = array_diff_assoc ( $code_pid, $unique_arr );
+                if(!empty($repeat_arr)){
+                    for ($i=0; $i < count($tz)-1; $i++) { 
+                        for ($j=$i+1; $j < count($tz); $j++) { 
+                            if(isset($tz[$i]) && isset($tz[$j])){
+                                if($tz[$i]['code_pid'] == $tz[$j]['code_pid']){
+                                    $array = array($i=>$cate_odds[$i],$j=>$cate_odds[$j]);
+                                    $array_key = array_search(min($array),$array);
+                                    unset($tz[$array_key]);
+                                    unset($cate_id[$array_key]);
+                                }    
+                            }
+                        }
+                    }
+                    $cate_id = implode(',', $cate_id);
+                    $cate_id = explode(',', $cate_id);
+                    $data['tz'][$key]['tz_result'] = $cate_id;
+                }
+                
             }
         }
-        // dump($tz);die;
+
         $Group = new Group();
         // 预计中奖金额
         $chuan = explode(',', $data['chuan']);
@@ -232,7 +256,8 @@ class Order extends Base
                 $order_tz_data[] = $group_data[$k];
             }
         }
-        
+        // dump($order_tz_data);die;
+        $order_total_odds = 0;
         foreach ($order_tz_data as $key => $value) {
             $tz_data = explode(',', $order_tz_data[$key]);
             $order_tz_odds[$key] = 1;
@@ -240,8 +265,9 @@ class Order extends Base
                 $tz_odds = db($game_cate.'_game_cate')->where('cate_id='.$tz_data[$k])->value('cate_odds');
                 $order_tz_odds[$key] *= $tz_odds;
             }
+            $order_total_odds += $order_tz_odds[$key];
         }
-        $order_total_odds = max($order_tz_odds);
+        // $order_total_odds = max($order_tz_odds);
         // 预计中奖金额 end
         /*****获取注数*****/
         $tz_num = $Group->tz_num($data);
@@ -392,6 +418,8 @@ class Order extends Base
             $game[$key] = db($game_cate)->where('id='.$order_info[$key]['game_id'])->find();
             $data['order_info'][$key]['week'] = $game[$key]['week']; // 周几
             $data['order_info'][$key]['game_no'] = $game[$key]['game_no']; // 比赛编号
+            $data['order_info'][$key]['dan'] = $order_info[$key]['dan']; // 比赛编号
+
             if($order_info[$key]['game_cate'] == 1){
                 $data['order_info'][$key]['down_score'] = $game[$key]['down_score']; // 最终比分
             }else{
