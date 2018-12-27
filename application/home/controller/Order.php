@@ -209,19 +209,19 @@ class Order extends Base
             $game_cate = 'nba';
         }
         
-        // $tz = $data['tz'];
-        // foreach ($data['tz'] as $key => $value) {
-        //     $tz = $data['tz'][$key]['tz_result'];
-        //     if($tz > 1){
-        //         foreach ($tz as $k => $v) {
-        //             $tz[$k] = db($game_cate.'_game_cate gc')
-        //                 ->field('gc.cate_id,gc.cate_odds,c.code_pid')
-        //                 ->join($game_cate.'_code c','gc.cate_code=c.code','LEFT')
-        //                 ->where('gc.cate_id='.$tz[$k] )
-        //                 ->find();
-        //         }
-        //     }
-        // }
+        $tz = $data['tz'];
+        foreach ($data['tz'] as $key => $value) {
+            $tz = $data['tz'][$key]['tz_result'];
+            if($tz > 1){
+                foreach ($tz as $k => $v) {
+                    $tz[$k] = db($game_cate.'_game_cate gc')
+                        ->field('gc.cate_id,gc.cate_odds,c.code_pid')
+                        ->join($game_cate.'_code c','gc.cate_code=c.code','LEFT')
+                        ->where('gc.cate_id='.$tz[$k] )
+                        ->find();
+                }
+            }
+        }
         // dump($tz);die;
         $Group = new Group();
         // 预计中奖金额
