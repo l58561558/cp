@@ -10,6 +10,7 @@ namespace app\adminz\controller;
 
 
 use think\Db;
+use think\Log;
 use think\View;
 
 class Optional extends Base
@@ -256,7 +257,7 @@ class Optional extends Base
             ->select();
 
         if (empty($order_infos)) { // 没有订单
-            \db('fbo_game')->where('id',$game_id)->update(['status'=>2]);
+            \db('fbo_game')->where('id', $game_id)->update(['status' => 2]);
             Db::commit();
             $this->success('没有订单详情');
         }
@@ -369,7 +370,7 @@ class Optional extends Base
                 }
             }
         }
-        $update_fbo_game = \db('fbo_game')->where('id',$game_id)->update(['status'=>2]);
+        $update_fbo_game = \db('fbo_game')->where('id', $game_id)->update(['status' => 2]);
         if (!$update_fbo_game) {
             Db::rollback();
             $this->error('数据库保存失败！');
@@ -389,6 +390,81 @@ class Optional extends Base
         }
         $this->assign('game', $game);
         return view();
+    }
+
+    public function auto_create()
+    {
+        $data = $_REQUEST;
+        $session = isset($data['issue']) ? (int)$data['issue'] : 0;
+
+        Db::startTrans();
+        $url = 'http://cp.zgzcw.com/lottery/zcplayvs.action?lotteryId=13&issue=';
+        $now_session = \db('fbo_game')->order('session desc')->find();
+        $api_result_json = '';
+        if ($session < $now_session['session']) {
+            $session = $now_session['session'] + 1;
+        }
+
+        $i = 1;
+        while (1) {
+            if ($i>10) break;
+            $new_url = $url . (string)($session);
+            $api_result_json = file_get_contents($new_url);
+            if ($api_result_json) break;
+            $session ++;
+            $i++;
+        }
+
+        if (empty($api_result_json)) {
+            $this->error('没有新比赛');
+        }
+        $api_result = json_decode($api_result_json, true);
+        if (empty($api_result)) {
+            $this->error('爬取数据错误');
+        }
+        if (!$api_result['matchInfo'][0]['gameStartDate'] ||
+            !$api_result['matchInfo'][0]['issue'] ||
+            !$api_result['matchInfo'][0]['leageNameFull'] ||
+            !$api_result['matchInfo'][0]['hostName'] ||
+            !$api_result['matchInfo'][0]['guestName'] ||
+            !$api_result['matchInfo'][0]['kj_time'] ||
+            !$api_result['matchInfo'][0]['lotteryEndDate'] ||
+            $api_result['matchInfo'][0]['issue'] != $session
+        ) {
+            echo $session;
+            $this->error('爬取数据有改动！生成失败！');
+        }
+        $game = [
+            'session' => $session,
+            'name' => $session . '期',
+            'deadline' => $api_result['matchInfo'][0]['lotteryEndDate'],
+            'add_time' => date('Y-m-d H:i:s'),
+            'status' => 0
+        ];
+        $insert_game_id = \db('fbo_game')->insertGetId($game);
+        if (!$insert_game_id) {
+            Db::rollback();
+            $this->error('入库失败！');
+        }
+        $game_infos = [];
+        foreach ($api_result['matchInfo'] as $competition => $game_info) {
+            $game_infos[] = [
+                'fbo_game_id' => $insert_game_id,
+                'competition' => $competition + 1,
+                'league_type' => $game_info['leageNameFull'],
+                'match_time' => $game_info['gameStartDate'],
+                'home' => $game_info['hostName'],
+                'load' => $game_info['guestName'],
+                'add_time' => date('Y-m-d H:i:s'),
+            ];
+        }
+        $insert_game_info = \db('fbo_game_info')->insertAll($game_infos);
+        if (!$insert_game_info) {
+            Db::rollback();
+            $this->error('入库失败！');
+        }
+        Db::commit();
+        $this->success('生成' . $session . '期成功');
     }
 
     static $GAME_TYPE_NINE_IN_DB = 3;
