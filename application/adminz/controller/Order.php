@@ -172,6 +172,37 @@ class Order extends Base
         $game_cate = db('order')->where('order_id='.$order_id)->value('game_cate');
         if($game_cate == 1) $this->redirect("football/order_info",['order_id'=>$order_id]);
         if($game_cate == 2) $this->redirect("nba/order_info",['order_id'=>$order_id]);
+
+        $order = db('order')->where('order_id='.$order_id)->find();
+        $order_info = db('order_info')->where('order_id='.$order_id)->select();
+        $order['game_num'] = count($order_info);
+        foreach ($order_info as $key => $value) {
+            $fbo_game_info[$key] = db('fbo_game_info')->where('id='.$order_info[$key]['game_id'])->find();
+            $fbo_game_info[$key]['game_status'] = $order_info[$key]['game_status'];
+            $tz_result = explode(',', $order_info[$key]['tz_result']);
+            foreach ($tz_result as $k => $v) {
+                if($tz_result[$k] == 3) $tz_res[$k]['cate_name'] = '胜';
+                if($tz_result[$k] == 1) $tz_res[$k]['cate_name'] = '平';
+                if($tz_result[$k] == 0) $tz_res[$k]['cate_name'] = '负';
+            }
+            $fbo_game_info[$key]['tz_result'] = $tz_res;
+
+            if(!empty($order_info[$key]['win_result'])){
+                if($order_info[$key]['win_result'] == '3') $win_res['cate_name'] = '胜';
+                if($order_info[$key]['win_result'] == '1') $win_res['cate_name'] = '平';
+                if($order_info[$key]['win_result'] == '0') $win_res['cate_name'] = '负';
+                $fbo_game_info[$key]['win_result'] = $win_res;
+            }else if($order_info[$key]['win_result'] == '0'){
+                $win_res['cate_name'] = '负';
+                $fbo_game_info[$key]['win_result'] = $win_res;
+            }
+
+
+        }
+        $order['order_info'] = $fbo_game_info;
+        // dump($order);die;
+        $this->assign("data",$order);
+        return view();
     }
     /**
      * 编辑指定字段
