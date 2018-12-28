@@ -627,8 +627,7 @@ class Nba extends Base
                                     $res = $Detail->add_detail($order_hm_desc['user_id'], 7, $commission, 1);
                                     /**添加明细**/
                                     if($res > 0){
-                                        db('user')->where('id='.$order_hm_desc['user_id'])->setInc('no_balance',$commission*0.04);
-                                        db('user')->where('id='.$order_hm_desc['user_id'])->setInc('balance',$commission*0.06);
+                                        db('user')->where('id='.$order_hm_desc['user_id'])->setInc('balance',$commission);
                                         db('user')->where('id='.$order_hm_desc['user_id'])->setInc('amount_money',$commission);
                                     }else{
                                         // 回滚事务
@@ -646,8 +645,7 @@ class Nba extends Base
                                 /**添加明细**/
                                 if($res > 0){
                                     // 将中奖金额添加到用户余额里
-                                    db('user')->where('id='.$order['user_id'])->setInc('no_balance',$user_win_money*0.04);
-                                    db('user')->where('id='.$order['user_id'])->setInc('balance',$user_win_money*0.06);
+                                    db('user')->where('id='.$order['user_id'])->setInc('balance',$user_win_money);
                                     db('user')->where('id='.$order['user_id'])->setInc('amount_money',$user_win_money);
                                 }else{
                                     // 回滚事务
@@ -676,8 +674,7 @@ class Nba extends Base
                                 $res = $Detail->add_detail($order_gd_desc['user_id'], 8, $commission, 1);
                                 /**添加明细**/
                                 if($res > 0){
-                                    db('user')->where('id='.$order_gd_desc['user_id'])->setInc('no_balance',$commission*0.04);
-                                    db('user')->where('id='.$order_gd_desc['user_id'])->setInc('balance',$commission*0.06);
+                                    db('user')->where('id='.$order_gd_desc['user_id'])->setInc('balance',$commission);
                                     db('user')->where('id='.$order_gd_desc['user_id'])->setInc('amount_money',$commission);
                                 }else{
                                     // 回滚事务
@@ -695,8 +692,7 @@ class Nba extends Base
                             /**添加明细**/
                             if($res > 0){
                                 // 将中奖金额添加到用户余额里
-                                db('user')->where('id='.$order['user_id'])->setInc('no_balance',$win_money*0.04);
-                                db('user')->where('id='.$order['user_id'])->setInc('balance',$win_money*0.06);
+                                db('user')->where('id='.$order['user_id'])->setInc('balance',$win_money);
                                 db('user')->where('id='.$order['user_id'])->setInc('amount_money',$win_money);
                             }else{
                                 // 回滚事务
@@ -707,8 +703,7 @@ class Nba extends Base
                             $res = $Detail->add_detail($order['user_id'], 4, $win_money, 1);
                             /**添加明细**/
                             if($res > 0){
-                                db('user')->where('id='.$order['user_id'])->setInc('no_balance',$win_money*0.04);
-                                db('user')->where('id='.$order['user_id'])->setInc('balance',$win_money*0.06);
+                                db('user')->where('id='.$order['user_id'])->setInc('balance',$win_money);
                                 db('user')->where('id='.$order['user_id'])->setInc('amount_money',$win_money);
                             }else{
                                 // 回滚事务
