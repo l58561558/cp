@@ -204,7 +204,7 @@ class Optional extends Base
                 'order_id' => $order_id,
                 'game_id' => $a_ticket['game_info_id'],
                 'dan' => $a_ticket['is_courage'] ? 1 : 0,
-                'tz_result' => $a_ticket['tz'],
+                'tz_result' => implode(',', str_split($a_ticket['tz'])),
                 'tz_odds' => '',
                 'game_status' => 0,
                 'add_time' => date('Y-m-d H:i:s'),

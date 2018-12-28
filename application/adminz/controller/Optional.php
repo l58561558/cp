@@ -284,7 +284,7 @@ class Optional extends Base
             if ($order_info['dan']) {
                 $order_lists[$order_info['order_id']]['courage'][] = ['game_id' => $order_info['game_id'], 'bet_result' => $order_info['tz_result']];
             }
-            if (in_array($order_info['win_result'], str_split($order_info['tz_result']))) {
+            if (in_array($order_info['win_result'], explode(',', $order_info['tz_result']))) {
                 $order_lists[$order_info['order_id']]['right_game_ids'][] = $order_info['game_id'];
                 $order_lists[$order_info['order_id']]['right_times']++;
             }
@@ -296,7 +296,7 @@ class Optional extends Base
                         $sorry = 0;
                         foreach ($list['courage'] as $courageArr) {
                             // 如果选的胆都中了，则发奖
-                            if (!in_array($right_item_lists[$courageArr['game_id']], str_split($courageArr['bet_result']))) {
+                            if (!in_array($right_item_lists[$courageArr['game_id']], explode(',', $courageArr['bet_result']))) {
                                 $sorry++;
                             }
                         }
