@@ -178,13 +178,6 @@ class Order extends Base
     {
         $_data = $_REQUEST;
 
-//         $_data = array (
-//   'chuan' => '3',
-//   'game_cate' => '1',
-//   'multiple' => '1',
-//   'tz' => '[{"game_id":"375","dan":"0","tz_result":["20215"]},{"game_id":"376","dan":"0","tz_result":["20269"]},{"game_id":"549","dan":"0","tz_result":["29611","29612","29633","29650","29659"]}]',
-//   'user_id' => '3',
-// );
         $data['multiple'] = $_data['multiple'];
         $data['chuan'] = $_data['chuan'];
         $data['tz'] = json_decode($_data['tz'],true);
@@ -231,24 +224,21 @@ class Order extends Base
                 $unique_arr = array_unique ( $code_pid ); 
                 // 获取重复数据的数组 
                 $repeat_arr = array_diff_assoc ( $code_pid, $unique_arr );
+
                 if(!empty($repeat_arr)){
-                    for ($i=0; $i < count($tz)-1; $i++) { 
-                        for ($j=$i+1; $j < count($tz); $j++) { 
-                            if(isset($tz[$i]) && isset($tz[$j])){
-                                if($tz[$i]['code_pid'] == $tz[$j]['code_pid']){
-                                    $array = array($i=>$cate_odds[$i],$j=>$cate_odds[$j]);
-                                    $array_key = array_search(min($array),$array);
-                                    unset($tz[$array_key]);
-                                    unset($cate_id[$array_key]);
-                                }    
+                    foreach ($repeat_arr as $ke => $val) {
+                        $arr = array();
+                        foreach ($tz as $k => $v) {
+                            if($tz[$k]['code_pid'] == $repeat_arr[$ke]){
+                                $arr[$k] = $tz[$k]['cate_odds'];
                             }
                         }
+                        $max_key = array_search(max($arr),$arr);
+                        $tz_data[] = $cate_id[$max_key];
+                        
                     }
-                    $cate_id = implode(',', $cate_id);
-                    $cate_id = explode(',', $cate_id);
-                    $data['tz'][$key]['tz_result'] = $cate_id;
+                    $data['tz'][$key]['tz_result'] = array_unique($tz_data);
                 }
-                
             }
         }
 
@@ -260,7 +250,6 @@ class Order extends Base
                 $order_tz_data[] = $group_data[$k];
             }
         }
-        // dump($order_tz_data);die;
         $order_total_odds = 0;
         foreach ($order_tz_data as $key => $value) {
             $tz_data = explode(',', $order_tz_data[$key]);
