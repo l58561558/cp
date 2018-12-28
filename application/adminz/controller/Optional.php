@@ -244,7 +244,8 @@ class Optional extends Base
                 ->where('game_id', '=', $game_info['id'])
                 ->whereIn('game_cate', '3,4')
                 ->update([
-                    'win_result' => $game_info['match_result']
+                    'win_result' => $game_info['match_result'],
+                    'game_status' => 1
                 ]);
             if (!$update_match_result) {
                 Db::rollback();
