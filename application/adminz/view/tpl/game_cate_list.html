@@ -1,0 +1,48 @@
+<table class="layui-table table">
+  <colgroup>
+    <col width="150">
+    <col width="200">
+    <col>
+  </colgroup>
+  <thead>
+    <tr >
+      <th style="text-align: center;" width="10%">#</th>
+      <th style="text-align: center;" width="20%">游戏名称</th>
+      <th style="text-align: center;" width="20%">所属分类</th>
+      <th style="text-align: center;" width="20%">游戏图标</th>
+      <th style="text-align: center;" width="20%">状态</th>
+      <th style="text-align: center;" width="10%">操作</th>
+    </tr> 
+  </thead>
+  <tbody>
+  	{volist name="_list" id="info" key='key'}
+    <tr>
+      <td style="text-align: center;">{$key}</td>
+      <td style="text-align: center;">{$info.game_name|default=''}</td>
+      <td style="text-align: center;">{$info.type_name|default=''}</td>
+      <td style="text-align: center;"><img src="__UPLOADS__/game_cate/{$info.pic|default=''}"></td>
+      <td style="text-align: center;">
+        {if $info.status eq 1}
+          <a class='btn-field' name='status' href='javascript:;' title='点击更改状态' data-status='0' data-id='{$info.game_id}'' data-url="{:url('game_cate/game_edit_field')}"><i class='fa fa-check'></i></a>
+        {else /}
+          <a class='btn-field' name='status' href='javascript:;' title='点击更改状态' data-status='1' data-id='{$info.game_id}' data-url="{:url('game_cate/game_edit_field')}"><i class='fa fa-close'></i></a>
+        {/if}
+      </td>
+      <td style="text-align: center;">
+      	<div class="btn-group btn-group-sm">
+			<a href="{:url('game_cate/game_delete')}?id={$info.game_id}">删除</a>&nbsp;&nbsp;&nbsp;
+			<a href="{:url('game_cate/edit')}?game_id={$info.game_id}">编辑</a>
+		</div>
+	</td>
+    </tr>
+   {/volist}
+  {empty name='_list'}
+  <tr>
+    <td colspan="15">空空如也~</td>
+  </tr>
+  {/empty}
+  </tbody>
+</table>
+<div class="box-footer clearfix">
+  <ul class="pagination pull-right">{$page}</ul>
+</div>

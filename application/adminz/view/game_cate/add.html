@@ -1,0 +1,78 @@
+{extend name="public/base" /}
+{block name="content"}
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">添加游戏</h3>
+                        <div class="pull-right">
+                            <a href="{:url('game_cate/index')}" class="btn btn-link btn-sm"><i class="fa fa-angle-double-left"></i>&nbsp;返回列表</a>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active" data-id="tab_base"><a href="javascript:;">基础信息</a></li>
+                    </ul>
+                    <form id="form_submit" enctype="multipart/form-data" class="layui-form layui-form-pane" action="" method="post">
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">分类</label>
+                        <div class="layui-input-block">
+                          <select name="type_id" lay-filter="aihao">
+                             {volist name="game_type|default=array()" id="vo"}
+                            <option value="{$vo.type_id}">{$vo.type_name}</option>
+                            {/volist}
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">游戏名称</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="game_name" lay-verify="required" placeholder="游戏名称" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">游戏编码</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="game_code" lay-verify="required" placeholder="游戏编码" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">游戏图标</label>
+                        <div class="layui-input-block">
+                          <input type="file" name="pic"  class="form-control">
+                        </div>
+                      </div>
+                      </div>
+                      <div class="layui-input-block">
+                          <button class="layui-btn" lay-submit=""  lay-filter="demo1">保存</button>
+                          <label for="jump_list" style="margin-left: 15px;"><input type="checkbox" data-url="{:url('game_cate/index')}" id="jump_list" value="1" >返回列表页</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}
+{block name="js"}
+    <script>
+        layui.use(['form', 'layedit', 'laydate'], function(){
+  var form = layui.form
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  ,laydate = layui.laydate;
+  
+  //日期
+  laydate.render({
+    elem: '#date'
+  });
+  laydate.render({
+    elem: '#date1'
+  }); 
+});
+        $(function(){
+            
+        });
+    </script>
+{/block}
+
+
