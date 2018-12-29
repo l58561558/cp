@@ -34,8 +34,15 @@ class Index extends Base
         $versions = db('versions')->where('type="'.$type.'"')->find();
         $version = str_replace('.', '', $version);
         $versions['version'] = str_replace('.', '', $versions['version']);
+        $data[] = '本次更新内容:';
+        $data[] = '1.';
+        $data[] = '2.';
+        $data[] = '3.';
+        $data[] = '4.';
+        $data[] = '5.';
+
         if($versions['version'] != $version){
-            echo json_encode(['msg'=>'请更新','code'=>1,'success'=>true,'download'=>$versions['download']]);
+            echo json_encode(['msg'=>'请更新','code'=>1,'success'=>true,'download'=>$versions['download'],'data'=>$data]);
             exit;
         }else{
             echo json_encode(['msg'=>'不用更新了','code'=>0,'success'=>false]);

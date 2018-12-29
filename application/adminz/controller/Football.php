@@ -3,6 +3,7 @@ namespace app\adminz\controller;
 use app\adminz\model\Detail;
 use app\home\model\Group;
 use think\Db;
+use think\Log;
 class Football extends Base
 {
     public $game_cate = 1;
@@ -643,9 +644,11 @@ class Football extends Base
         if($res > 0) {
             // 提交事务
             Db::commit();
-
-            $this->success("操作成功");
+            echo "结算成功";
+            Log::write('结算成功:game_id='.$id);
         }else{
+            Log::write('比赛已结算:game_id='.$id);
+            echo "比赛已结算,请勿重复提交";
             // 回滚事务
             Db::rollback();
         }

@@ -11,6 +11,21 @@
 
 // 应用公共文件
 
+    function getCurl($url){
+        $header = 'Accept-Content-Type:application/json;Accept-Charset: utf-8';
+        $curl = curl_init();
+        curl_setopt($curl,CURLOPT_HEADER,$header);
+        curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+        curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($curl,CURLOPT_HEADER,0);
+        curl_setopt($curl,CURLOPT_NOBODY,0);
+        curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,false);
+        curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,false);
+        curl_setopt($curl,CURLOPT_URL,$url);
+        $result = curl_exec($curl);
+        curl_close($curl);
+        return $result;
+    }
     /**
      * 获取图片地址
      * @param  string $saveName [文件名称]
