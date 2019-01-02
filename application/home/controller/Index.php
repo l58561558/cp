@@ -22,6 +22,16 @@ class Index extends Base
         exit;
     }
 
+    public function article()
+    {
+        $list = db('article')->field('article_id,title,pic,add_time')->order('add_time desc')->select();
+        foreach ($list as $key => $value) {
+            $list[$key]['pic'] = config('uploads_path.web').'article/'.$list[$key]['pic'];
+        }
+        echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$list]);
+        exit;
+    }
+
     public function get_order_group()
     {
     	$Group = new Group();

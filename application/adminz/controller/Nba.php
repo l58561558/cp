@@ -360,12 +360,15 @@ class Nba extends Base
             $data['order_info'][$key]['status'] = $game[$key]['status'];
             if(strpos($order_info[$key]['tz_result'] , ',') === false){
                 $data['order_info'][$key]['tz_result'][0] = db('nba_game_cate')->field('cate_id,cate_name,cate_odds,is_win')->where('cate_id='.$order_info[$key]['tz_result'])->find();
+                $data['order_info'][$key]['tz_result'][0]['cate_odds'] = $order_info[$key]['tz_odds'];
             }else{
                 if(!empty($order_info[$key]['tz_result'])){
+                    dump($order_info[$key]['tz_result']);
                     $tz_result = explode(',', $order_info[$key]['tz_result']);
                     foreach ($tz_result as $ke => $val) {
                         $tz_result[$ke] = db('nba_game_cate')->field('cate_id,cate_name,cate_odds,is_win')->where('cate_id='.$tz_result[$ke])->find();
                     }
+                    
                     $data['order_info'][$key]['tz_result'] = $tz_result;
                 }  
             }
@@ -381,6 +384,10 @@ class Nba extends Base
                     $gc['cate_name'] .= '('.$total_score.')';
                 }
                 $data['order_info'][$key]['tz_result'][$ke] = $gc;
+            }
+            $cate_odds = explode(',', $order_info[$key]['tz_odds']);
+            foreach ($cate_odds as $ke => $val) {
+                $data['order_info'][$key]['tz_result'][$ke]['cate_odds'] = $cate_odds[$ke];
             }
             if(!empty($order_info[$key]['win_result'])){
                 if(strpos($order_info[$key]['win_result'] , ',') === false){
@@ -572,10 +579,12 @@ class Nba extends Base
 
                     $order_tz_result = db('order_info')->field('dan,tz_result')->where('game_cate='.$this->game_cate.' and order_id='.$order_ids[$key])->select();
                     $order_win_result = db('order_info')->field('dan,win_result tz_result')->where('game_cate='.$this->game_cate.' and order_id='.$order_ids[$key])->select();
+                    $order_tz_odds = db('order_info')->field('dan,tz_odds tz_result')->where('game_cate='.$this->game_cate.' and order_id='.$order_ids[$key])->select();
 
                     $chuan = explode(',', $order['chuan']);
                     $order_tz_data = array();
                     $order_win_data = array();
+                    $order_tz_odds_data = array();
                     for ($i=0; $i < count($chuan); $i++) { 
                         $get_tz_data = $Group->get_group($chuan[$i],$order_tz_result);
                         for ($j=0; $j < count($get_tz_data); $j++) { 
@@ -585,18 +594,22 @@ class Nba extends Base
                         for ($j=0; $j < count($get_win_data); $j++) { 
                             $order_win_data[] = $get_win_data[$j];
                         }
+                        $get_tz_odds = $Group->get_group($chuan[$i],$order_tz_odds);
+                        for ($j=0; $j < count($get_tz_odds); $j++) { 
+                            $order_tz_odds_data[] = $get_tz_odds[$j];
+                        }
                     }
 
                     $total_odds = 0;
-
                     if(count($order_tz_data) == count($order_win_data)){
                         for ($i=0; $i < count($order_tz_data); $i++) { 
                             if($order_tz_data[$i] == $order_win_data[$i]){
                                 $cate_odds = 1;
-                                $exp_tz_data = explode(',', $order_tz_data[$i]);
+                                $exp_tz_data = explode(',', $order_tz_odds_data[$i]);
                                 for ($j=0; $j < count($exp_tz_data); $j++) { 
-                                    $order_tz_odds[] = db('nba_game_cate')->where('cate_id='.$exp_tz_data[$j])->value('cate_odds');
-                                    $cate_odds *= db('nba_game_cate')->where('cate_id='.$exp_tz_data[$j])->value('cate_odds');
+                                    // $order_tz_odds[] = db('nba_game_cate')->where('cate_id='.$exp_tz_data[$j])->value('cate_odds');
+                                    // $cate_odds *= db('nba_game_cate')->where('cate_id='.$exp_tz_data[$j])->value('cate_odds');
+                                    $cate_odds *= $exp_tz_data[$j];
                                 }
                                 $total_odds += $cate_odds;
                             }

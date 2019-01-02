@@ -9,6 +9,13 @@ use app\reptile\model\Basketball;
 
 class Auto extends Base
 {
+	function __construct()
+    {
+        Log::init([
+            'type' =>  'File',
+            'path' =>  ROOT_PATH.'/logs/over/',
+        ]);
+    }
 	public function fb_over()
 	{
 		// 开启事务
@@ -34,7 +41,7 @@ class Auto extends Base
 	        			if($res > 0){
 	        				Log::write('比分修改成功:'.$game_id);
 	        				Db::commit();
-	        				$this->redirect('adminz/football/fb_over',['id'=>$game_id]);
+	        				$Football->fb_over($game_id);
 	        			}else{
 	        				Log::write('比分修改失败:'.$game_id);
 	        			}
@@ -88,7 +95,7 @@ class Auto extends Base
 	        			if($res > 0){
 	        				Log::write('比分修改成功:'.$game_id);
 	        				Db::commit();
-	        				$this->redirect('adminz/nba/nba_over',['id'=>$game_id]);
+	        				$Basketball->nba_over($game_id);
 	        			}else{
 	        				Log::write('比分修改失败:'.$game_id);
 	        			}

@@ -347,7 +347,7 @@ class Gendan extends Base
     }
 
     // 跟单列表
-    public function gendan_list($page=1, $count=10)
+    public function gendan_list($type, $page=1, $count=10)
     {
         $start = ($page-1)*$count;
         $list = db('order_gd_desc')->where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->limit($start, $count)->select();

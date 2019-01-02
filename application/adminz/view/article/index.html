@@ -1,0 +1,40 @@
+{extend name="public/base" /}
+
+{block name="content"}
+	<div class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box">
+					<div class="box-header with-border">
+		              <h3 class="box-title">文章列表</h3>
+		              <div class="pull-right">
+			              <a href="{:url('article/add')}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>&nbsp;添加文章</a>
+			          </div>
+		            </div>
+		            <div id="data_list_info"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+{/block}
+
+{block name="js"}
+	<script type="text/javascript">
+		function getData(p){
+			if(p==undefined || p<1)
+				p = 1;
+			var cate_id = $("#cate_id").val();
+			$.post("{:url('article/get_article_list')}",{page:p,cate_id:cate_id},function(res){
+				if(res.code == 1){
+					$("#data_list_info").html('').html(res.data);
+				}
+			},'json');
+		}
+		$(function(){
+			getData();
+			$("#cate_id").change(function(){
+				getData();
+			});
+		});
+	</script>
+{/block}

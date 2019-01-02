@@ -20,7 +20,7 @@
       <td style="text-align: center;">{$key}</td>
       <td style="text-align: center;">{$info.game_name|default=''}</td>
       <td style="text-align: center;">{$info.type_name|default=''}</td>
-      <td style="text-align: center;"><img src="__UPLOADS__/game_cate/{$info.pic|default=''}"></td>
+      <td style="text-align: center;"><img style="width: auto;height: auto" src="__UPLOADS__/game_cate/{$info.pic|default=''}"></td>
       <td style="text-align: center;">
         {if $info.status eq 1}
           <a class='btn-field' name='status' href='javascript:;' title='点击更改状态' data-status='0' data-id='{$info.game_id}'' data-url="{:url('game_cate/game_edit_field')}"><i class='fa fa-check'></i></a>

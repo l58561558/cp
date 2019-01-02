@@ -11,7 +11,7 @@ class Games extends Base {
     function __construct(){
         Log::init([
             'type' =>  'File',
-            'path' =>  LOG_PATH,
+            'path' =>  ROOT_PATH.'/logs/add/',
         ]);
     }
 
@@ -49,9 +49,12 @@ class Games extends Base {
 				$id = db('fb_game')
 						->where('week','=',$fb_game['week'])
 						->where('game_no','=',$fb_game['game_no'])
-						->where('end_time="'.$fb_game['end_time'].'"')
+						->where('home_team="'.$fb_game['home_team'].'"')
+						->where('road_team="'.$fb_game['road_team'].'"')
+						// ->where('end_time="'.$fb_game['end_time'].'"')
 						->value('id');
 				if(!empty($id) && $id >0){
+					$game_id = db('fb_game')->where('id',$id)->update($fb_game);
 					$fb_game_cate['home_win']            = empty($game_info[5][0])?0:$game_info[5][0];
 					$fb_game_cate['home_eq']             = empty($game_info[5][1])?0:$game_info[5][1];
 					$fb_game_cate['home_lose']           = empty($game_info[5][2])?0:$game_info[5][2];
@@ -247,9 +250,12 @@ class Games extends Base {
     				$id = db('nba_game')
 						->where('week','=',$nba_game['week'])
 						->where('game_no','=',$nba_game['game_no'])
-						->where('end_time="'.$nba_game['end_time'].'"')
+						->where('home_team="'.$fb_game['home_team'].'"')
+						->where('road_team="'.$fb_game['road_team'].'"')
+						// ->where('end_time="'.$nba_game['end_time'].'"')
 						->value('id');
 					if(!empty($id) && $id >0){
+						$game_id = db('nba_game')->where('id',$id)->update($nba_game);
 						// continue;
 						$nba_game_cate['road_win']           = !isset($game_info[1][0])?0:$game_info[1][0];
 		                $nba_game_cate['home_win']           = !isset($game_info[1][1])?0:$game_info[1][1];
