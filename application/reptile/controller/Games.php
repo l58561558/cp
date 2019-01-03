@@ -349,6 +349,82 @@ class Games extends Base {
     		echo 'OK';
     	}
     }
+
+    public function auto_create()
+    {
+        $data = $_REQUEST;
+        $session = isset($data['issue']) ? (int)$data['issue'] : 0;
+
+        Db::startTrans();
+        $url = 'http://cp.zgzcw.com/lottery/zcplayvs.action?lotteryId=13&issue=';
+        $now_session = \db('fbo_game')->order('session desc')->find();
+        $api_result_json = '';
+        if ($session < $now_session['session']) {
+            $session = $now_session['session'] + 1;
+        }
+
+        $i = 1;
+        while (1) {
+            if ($i>10) break;
+            $new_url = $url . (string)($session);
+            $api_result_json = file_get_contents($new_url);
+            if ($api_result_json) break;
+            $session ++;
+            $i++;
+        }
+
+        if (empty($api_result_json)) {
+            Log::error('自动生成足彩任选：没有新比赛');
+        }
+        $api_result = json_decode($api_result_json, true);
+        if (empty($api_result)) {
+            Log::error('自动生成足彩任选：爬取数据错误');
+        }
+        if (!$api_result['matchInfo'][0]['gameStartDate'] ||
+            !$api_result['matchInfo'][0]['issue'] ||
+            !$api_result['matchInfo'][0]['leageNameFull'] ||
+            !$api_result['matchInfo'][0]['hostName'] ||
+            !$api_result['matchInfo'][0]['guestName'] ||
+            !$api_result['matchInfo'][0]['kj_time'] ||
+            !$api_result['matchInfo'][0]['lotteryEndDate'] ||
+            $api_result['matchInfo'][0]['issue'] != $session
+        ) {
+            echo $session;
+            Log::error('自动生成足彩任选：爬取数据有改动！生成失败！');
+        }
+        $game = [
+            'session' => $session,
+            'name' => $session . '期',
+            'deadline' => $api_result['matchInfo'][0]['lotteryEndDate'],
+            'add_time' => date('Y-m-d H:i:s'),
+            'status' => 0
+        ];
+        $insert_game_id = \db('fbo_game')->insertGetId($game);
+        if (!$insert_game_id) {
+            Db::rollback();
+            Log::error('自动生成足彩任选：入库失败！');
+        }
+        $game_infos = [];
+        foreach ($api_result['matchInfo'] as $competition => $game_info) {
+            $game_infos[] = [
+                'fbo_game_id' => $insert_game_id,
+                'competition' => $competition + 1,
+                'league_type' => $game_info['leageNameFull'],
+                'match_time' => $game_info['gameStartDate'],
+                'home' => $game_info['hostName'],
+                'load' => $game_info['guestName'],
+                'add_time' => date('Y-m-d H:i:s'),
+            ];
+        }
+        $insert_game_info = \db('fbo_game_info')->insertAll($game_infos);
+        if (!$insert_game_info) {
+            Db::rollback();
+            Log::error('自动生成足彩任选：入库失败！');
+        }
+        Db::commit();
+        $this->success('生成' . $session . '期成功');
+    }
+
     /**
      * curl的get请求
      * @param  string $url 请求的url
