@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #news{
+            width: auto;
+        }
+        #title{
+            font-size: 5vw;
+            font-weight: 600;
+            letter-spacing: 1vw;
+            margin: 0 auto;
+            padding-top: 4vw;
+            margin:0 3vw;
+        }
+        #time{
+            margin-top: 2vw;
+            padding: 0 3vw;
+        }
+        #time span{
+            font-size: 3.5vw;
+            color: grey;
+        }
+        #time #s1{
+            font-size: 3.2vw;
+        }
+        img{
+            display: block;
+            width:94vw;
+            margin: 2vw auto;  
+        }
+        #word{
+            padding: 1vw 3vw;
+        }
+        #word p{
+            text-indent: 7vw;
+            font-size: 3.5vw;
+            margin-top: 0;  
+        }
+    </style>
+</head>
+<body>
+    <div id="news"> 
+        <p id="title">{$data.title}</p>
+        <div id="time">
+            <span>{$data.add_time}</span>
+        </div>
+        <div id="word">
+            {$data.content}
+        </div>
+    </div>
+</body>
+</html>

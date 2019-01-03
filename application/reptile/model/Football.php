@@ -7,11 +7,14 @@ use think\Model;
 use think\Log;
 use think\Db;
 class Football extends Model {
-	public function __construct()
+
+    public $game_cate=1;
+
+	function __construct()
     {
         Log::init([
             'type' =>  'File',
-            'path' =>  LOG_PATH,
+            'path' =>  ROOT_PATH.'/logs/over/',
         ]);
     }
     /**
@@ -189,6 +192,7 @@ class Football extends Model {
                     $chuan = explode(',', $order['chuan']);
                     $order_tz_data = array();
                     $order_win_data = array();
+                    $order_tz_odds_data = array();
                     for ($i=0; $i < count($chuan); $i++) { 
                         $get_tz_data = $Group->get_group($chuan[$i],$order_tz_result);
                         for ($j=0; $j < count($get_tz_data); $j++) { 
@@ -200,21 +204,20 @@ class Football extends Model {
                         }
                         $get_tz_odds = $Group->get_group($chuan[$i],$order_tz_odds);
                         for ($j=0; $j < count($get_tz_odds); $j++) { 
-                            $order_tz_odds[] = $get_tz_odds[$j];
+                            $order_tz_odds_data[] = $get_tz_odds[$j];
                         }
                     }
 
                     $total_odds = 0;
-
                     if(count($order_tz_data) == count($order_win_data)){
                         for ($i=0; $i < count($order_tz_data); $i++) { 
                             if($order_tz_data[$i] == $order_win_data[$i]){
                                 $cate_odds = 1;
-                                $exp_tz_data = explode(',', $order_tz_data[$i]);
+                                $exp_tz_data = explode(',', $order_tz_odds_data[$i]);
                                 for ($j=0; $j < count($exp_tz_data); $j++) { 
                                     // $order_tz_odds[] = db('fb_game_cate')->where('cate_id='.$exp_tz_data[$j])->value('cate_odds');
                                     // $cate_odds *= db('fb_game_cate')->where('cate_id='.$exp_tz_data[$j])->value('cate_odds');
-                                    $cate_odds *= $order_tz_odds[$j];
+                                    $cate_odds *= $exp_tz_data[$j];
                                 }
                                 $total_odds += $cate_odds;
                             }
@@ -346,5 +349,20 @@ class Football extends Model {
             Db::rollback();
         }
         return $res;
+    }
+
+    public function rank($score)
+    {
+        switch (true) 
+        {
+            case $score >= 7:  return 'total_seven_gt';
+            case $score == 6:  return 'total_six';
+            case $score == 5:  return 'total_five';
+            case $score == 4:  return 'total_four';
+            case $score == 3:  return 'total_three';
+            case $score == 2:  return 'total_two';
+            case $score == 1:  return 'total_one';
+            case $score == 0:  return 'total_zero';
+        }
     }
 }

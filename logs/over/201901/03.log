@@ -3670,3 +3670,2736 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.001165s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002032s ]
 [ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000930s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:00:03+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.013334s][吞吐率：75.00req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000874s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001482s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000736s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:05:03+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016853s][吞吐率：59.34req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000692s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001800s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000770s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:10:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.012077s][吞吐率：82.80req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000808s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001730s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000676s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:15:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.010719s][吞吐率：93.29req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000772s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001947s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 09:15:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001034s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T09:15:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017358s][吞吐率：57.61req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000890s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001897s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000737s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:20:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017641s][吞吐率：56.69req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001085s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002571s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000776s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:25:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.019186s][吞吐率：52.12req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000946s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001984s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000934s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:30:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016493s][吞吐率：60.63req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000792s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002140s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000827s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:30:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.017095s][吞吐率：58.50req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001006s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001747s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 09:30:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001085s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T09:35:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.014724s][吞吐率：67.92req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000657s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001337s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000611s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:40:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016273s][吞吐率：61.45req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001052s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000693s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:45:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.010248s][吞吐率：97.58req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000737s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001276s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 09:45:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001189s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T09:45:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016070s][吞吐率：62.23req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000905s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002018s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000896s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:50:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016205s][吞吐率：61.71req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000913s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001885s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000524s ]
+---------------------------------------------------------------
+[ 2019-01-03T09:55:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.014659s][吞吐率：68.22req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000869s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001781s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000771s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.018716s][吞吐率：53.43req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000914s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001407s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000611s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.014328s][吞吐率：69.79req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000818s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001919s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 10:00:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000972s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T10:05:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017824s][吞吐率：56.10req/s] [内存消耗：497.96kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000722s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001293s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000664s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:10:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.018918s][吞吐率：52.86req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000975s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001463s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000717s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:15:03+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.015646s][吞吐率：63.91req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000833s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 10:15:03" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000901s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T10:15:03+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016714s][吞吐率：59.83req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000845s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001843s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000740s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:20:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.018498s][吞吐率：54.06req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000957s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001766s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.001045s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:25:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.015549s][吞吐率：64.31req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000741s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001299s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000594s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:30:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.013443s][吞吐率：74.39req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000941s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001741s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000931s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:30:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.013039s][吞吐率：76.69req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000757s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001599s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 10:30:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000980s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T10:35:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.014434s][吞吐率：69.28req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000898s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001838s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000830s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:40:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017521s][吞吐率：57.07req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001030s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001655s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000715s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:45:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.011878s][吞吐率：84.19req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000688s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001635s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 10:45:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001285s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T10:45:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.012796s][吞吐率：78.15req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001168s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002141s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000813s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:50:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.014457s][吞吐率：69.17req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000981s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001566s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000991s ]
+---------------------------------------------------------------
+[ 2019-01-03T10:55:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.012515s][吞吐率：79.90req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000837s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001777s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000757s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.019473s][吞吐率：51.35req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001069s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001789s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000914s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.016298s][吞吐率：61.36req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000881s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.002102s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 11:00:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001306s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T11:05:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.011061s][吞吐率：90.41req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000825s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001664s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000734s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:10:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.012593s][吞吐率：79.41req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002081s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000827s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:15:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016746s][吞吐率：59.72req/s] [内存消耗：496.87kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001335s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000741s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:15:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.017455s][吞吐率：57.29req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000950s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001347s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 11:15:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000792s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T11:15:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.146825s][吞吐率：6.81req/s] [内存消耗：473.95kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000670s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.001610s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 11:15:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.001091s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `home_score`=114,`road_score`=98,`win_team`='奇才'  WHERE  (  id=172 ) [ RunTime:0.000966s ]
+[ log ] 比分修改成功:172
+[ sql ] [ SQL ] SELECT * FROM `nba_game` WHERE  (  id=172 ) LIMIT 1 [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game_cate` [ RunTime:0.001800s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=172 and cate_code="home_win" ) [ RunTime:0.003710s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=172 and cate_code="road_win" ) [ RunTime:0.003842s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=172 and cate_code like "%differ_%" ) [ RunTime:0.003773s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=172 and cate_code="differ_home_20" ) [ RunTime:0.003612s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=172 and cate_code="let_score_home_win" ) [ RunTime:0.003657s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=172 and cate_code="let_score_road_win" ) [ RunTime:0.003795s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=172 and cate_code="total_big" ) [ RunTime:0.003590s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=172 and cate_code="total_small" ) [ RunTime:0.003777s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 ) [ RunTime:0.002428s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_info` [ RunTime:0.001886s ]
+[ sql ] [ SQL ] UPDATE order_info oi  INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` SET `win_game_result`='3080,3082,3083,3094'  WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=172 and oi.game_status=0 ) [ RunTime:0.009458s ]
+[ sql ] [ SQL ] SELECT * FROM order_info oi INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=172 and oi.game_status=0 ) [ RunTime:0.006186s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3083',`game_status`=1  WHERE  (  order_info_id=8907 ) [ RunTime:0.000975s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3083',`game_status`=1  WHERE  (  order_info_id=8910 ) [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3079 ) LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_code` [ RunTime:0.000985s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="road_win" ) LIMIT 1 [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=1 ) [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="road_win" ) LIMIT 1 [ RunTime:0.001298s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="home_win" ) LIMIT 1 [ RunTime:0.001880s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3080',`game_status`=1  WHERE  (  order_info_id=8913 ) [ RunTime:0.000526s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3082',`game_status`=1  WHERE  (  order_info_id=8944 ) [ RunTime:0.000482s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3080',`game_status`=1  WHERE  (  order_info_id=8955 ) [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3084 ) LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.001533s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.001772s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3083',`game_status`=1  WHERE  (  order_info_id=9085 ) [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3084 ) LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002058s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002020s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3083',`game_status`=1  WHERE  (  order_info_id=9363 ) [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3081 ) LIMIT 1 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_road_win" ) LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002105s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002371s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3082',`game_status`=1  WHERE  (  order_info_id=9399 ) [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3081 ) LIMIT 1 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_road_win" ) LIMIT 1 [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002310s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002337s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3082',`game_status`=1  WHERE  (  order_info_id=9420 ) [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3081 ) LIMIT 1 [ RunTime:0.000598s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_road_win" ) LIMIT 1 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002428s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002358s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3082',`game_status`=1  WHERE  (  order_info_id=9422 ) [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3084 ) LIMIT 1 [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002292s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=172 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002318s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3083',`game_status`=1  WHERE  (  order_info_id=9446 ) [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2139 ) [ RunTime:0.004137s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2140 ) [ RunTime:0.003975s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2141 ) [ RunTime:0.003975s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2147 ) [ RunTime:0.004444s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2150 ) [ RunTime:0.004285s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2175 ) [ RunTime:0.004056s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2229 ) [ RunTime:0.004468s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2236 ) [ RunTime:0.004148s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2243 ) [ RunTime:0.003945s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2244 ) [ RunTime:0.004220s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2250 ) [ RunTime:0.004340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002005s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2250 and order_status=1 ) LIMIT 1 [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2250 ) [ RunTime:0.004529s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2250 ) [ RunTime:0.004938s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2250 ) [ RunTime:0.004689s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2250 ) [ RunTime:0.000764s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `status`=0  WHERE  (  id=172 ) [ RunTime:0.000732s ]
+[ log ] 结算成功:game_id=172
+[ log ] 结算成功:172
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.000995s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `home_score`=84,`road_score`=122,`win_team`='独行侠'  WHERE  (  id=170 ) [ RunTime:0.000979s ]
+[ log ] 比分修改成功:170
+[ sql ] [ SQL ] SELECT * FROM `nba_game` WHERE  (  id=170 ) LIMIT 1 [ RunTime:0.001428s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=170 and cate_code="home_win" ) [ RunTime:0.006154s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=170 and cate_code="road_win" ) [ RunTime:0.003329s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=170 and cate_code like "%differ_%" ) [ RunTime:0.003446s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=170 and cate_code="differ_road_26" ) [ RunTime:0.003330s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=170 and cate_code="let_score_home_win" ) [ RunTime:0.002437s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=170 and cate_code="let_score_road_win" ) [ RunTime:0.001887s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=170 and cate_code="total_big" ) [ RunTime:0.001735s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=170 and cate_code="total_small" ) [ RunTime:0.001937s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 ) [ RunTime:0.001350s ]
+[ sql ] [ SQL ] UPDATE order_info oi  INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` SET `win_game_result`='3043,3045,3047,3054'  WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=170 and oi.game_status=0 ) [ RunTime:0.004865s ]
+[ sql ] [ SQL ] SELECT * FROM order_info oi INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=170 and oi.game_status=0 ) [ RunTime:0.004127s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3046 ) LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.001429s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.001390s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3045',`game_status`=1  WHERE  (  order_info_id=8904 ) [ RunTime:0.000523s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3045',`game_status`=1  WHERE  (  order_info_id=8960 ) [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3048 ) LIMIT 1 [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002510s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002764s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3047',`game_status`=1  WHERE  (  order_info_id=9016 ) [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3046 ) LIMIT 1 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002359s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002479s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3045',`game_status`=1  WHERE  (  order_info_id=9041 ) [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3046 ) LIMIT 1 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000765s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000728s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.003852s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002675s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3045',`game_status`=1  WHERE  (  order_info_id=9076 ) [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3048 ) LIMIT 1 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000612s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.001489s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.001475s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3047',`game_status`=1  WHERE  (  order_info_id=9083 ) [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3046 ) LIMIT 1 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002466s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002569s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3045',`game_status`=1  WHERE  (  order_info_id=9104 ) [ RunTime:0.000702s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3045',`game_status`=1  WHERE  (  order_info_id=9160 ) [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3048 ) LIMIT 1 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002408s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002487s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3047',`game_status`=1  WHERE  (  order_info_id=9163 ) [ RunTime:0.000731s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3045',`game_status`=1  WHERE  (  order_info_id=9176 ) [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3055 ) LIMIT 1 [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="differ_home_5" ) LIMIT 1 [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=4 ) [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_road_5" ) LIMIT 1 [ RunTime:0.002943s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_road_10" ) LIMIT 1 [ RunTime:0.002662s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_road_15" ) LIMIT 1 [ RunTime:0.002727s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_road_20" ) LIMIT 1 [ RunTime:0.002716s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_road_25" ) LIMIT 1 [ RunTime:0.002910s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_road_26" ) LIMIT 1 [ RunTime:0.002939s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_home_5" ) LIMIT 1 [ RunTime:0.002618s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_home_10" ) LIMIT 1 [ RunTime:0.002708s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_home_15" ) LIMIT 1 [ RunTime:0.002541s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_home_20" ) LIMIT 1 [ RunTime:0.002538s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_home_25" ) LIMIT 1 [ RunTime:0.003022s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=170 and is_win=1 and cate_code ="differ_home_26" ) LIMIT 1 [ RunTime:0.002548s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3054',`game_status`=1  WHERE  (  order_info_id=9361 ) [ RunTime:0.000777s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2138 ) [ RunTime:0.004735s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2152 ) [ RunTime:0.004734s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2160 ) [ RunTime:0.004101s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2160 and order_status=1 ) LIMIT 1 [ RunTime:0.000753s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2160 ) [ RunTime:0.005269s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2160 ) [ RunTime:0.005348s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2160 ) [ RunTime:0.004552s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2160 ) [ RunTime:0.000612s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2165 ) [ RunTime:0.004137s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2172 ) [ RunTime:0.003973s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2172 and order_status=1 ) LIMIT 1 [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2172 ) [ RunTime:0.004580s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2172 ) [ RunTime:0.005235s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2172 ) [ RunTime:0.004903s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2172 ) [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2175 ) [ RunTime:0.004672s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2180 ) [ RunTime:0.004138s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2192 ) [ RunTime:0.004549s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2193 ) [ RunTime:0.004569s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2196 ) [ RunTime:0.004444s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2229 ) [ RunTime:0.004235s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `status`=0  WHERE  (  id=170 ) [ RunTime:0.000827s ]
+[ log ] 结算成功:game_id=170
+[ log ] 结算成功:170
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000918s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `home_score`=92,`road_score`=117,`win_team`='热火'  WHERE  (  id=171 ) [ RunTime:0.000780s ]
+[ log ] 比分修改成功:171
+[ sql ] [ SQL ] SELECT * FROM `nba_game` WHERE  (  id=171 ) LIMIT 1 [ RunTime:0.000772s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=171 and cate_code="home_win" ) [ RunTime:0.003770s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=171 and cate_code="road_win" ) [ RunTime:0.003775s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=171 and cate_code like "%differ_%" ) [ RunTime:0.004269s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=171 and cate_code="differ_road_25" ) [ RunTime:0.003546s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=171 and cate_code="let_score_home_win" ) [ RunTime:0.003900s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=171 and cate_code="let_score_road_win" ) [ RunTime:0.003517s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=171 and cate_code="total_big" ) [ RunTime:0.001751s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=171 and cate_code="total_small" ) [ RunTime:0.001814s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 ) [ RunTime:0.001254s ]
+[ sql ] [ SQL ] UPDATE order_info oi  INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` SET `win_game_result`='3061,3063,3066,3071'  WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=171 and oi.game_status=0 ) [ RunTime:0.004517s ]
+[ sql ] [ SQL ] SELECT * FROM order_info oi INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=171 and oi.game_status=0 ) [ RunTime:0.004058s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3063',`game_status`=1  WHERE  (  order_info_id=8905 ) [ RunTime:0.000574s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3063',`game_status`=1  WHERE  (  order_info_id=8943 ) [ RunTime:0.000494s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=8954 ) [ RunTime:0.000779s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=8961 ) [ RunTime:0.000660s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3061',`game_status`=1  WHERE  (  order_info_id=9042 ) [ RunTime:0.000647s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=9084 ) [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3064 ) LIMIT 1 [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000650s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.003847s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002586s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3063',`game_status`=1  WHERE  (  order_info_id=9105 ) [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3065 ) LIMIT 1 [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002399s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002273s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=9177 ) [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3067 ) LIMIT 1 [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="differ_road_5" ) LIMIT 1 [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=4 ) [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_road_5" ) LIMIT 1 [ RunTime:0.001945s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_road_10" ) LIMIT 1 [ RunTime:0.002039s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_road_15" ) LIMIT 1 [ RunTime:0.001822s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_road_20" ) LIMIT 1 [ RunTime:0.001798s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_road_25" ) LIMIT 1 [ RunTime:0.001376s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_road_26" ) LIMIT 1 [ RunTime:0.001257s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_home_5" ) LIMIT 1 [ RunTime:0.001159s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_home_10" ) LIMIT 1 [ RunTime:0.001193s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_home_15" ) LIMIT 1 [ RunTime:0.001230s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_home_20" ) LIMIT 1 [ RunTime:0.001472s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_home_25" ) LIMIT 1 [ RunTime:0.001341s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="differ_home_26" ) LIMIT 1 [ RunTime:0.001329s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3071',`game_status`=1  WHERE  (  order_info_id=9362 ) [ RunTime:0.000690s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3065 ) LIMIT 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.001624s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.001749s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=9398 ) [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3065 ) LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002644s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002733s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=9407 ) [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3065 ) LIMIT 1 [ RunTime:0.000816s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000862s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002538s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.003336s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=9416 ) [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3065 ) LIMIT 1 [ RunTime:0.000761s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002632s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=171 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002526s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3066',`game_status`=1  WHERE  (  order_info_id=9419 ) [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2138 ) [ RunTime:0.004285s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2138 and order_status=1 ) LIMIT 1 [ RunTime:0.001104s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2138 ) [ RunTime:0.005990s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2138 ) [ RunTime:0.005213s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2138 ) [ RunTime:0.004810s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2138 ) [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2147 ) [ RunTime:0.002116s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2147 and order_status=1 ) LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2147 ) [ RunTime:0.002222s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2147 ) [ RunTime:0.002170s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2147 ) [ RunTime:0.003365s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `win_money`=304.8192,`is_win`=1  WHERE  (  order_id=2147 ) [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001347s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  (  id=122 ) LIMIT 1 [ RunTime:0.000754s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account_details` [ RunTime:0.001396s ]
+[ sql ] [ SQL ] INSERT INTO `account_details` (`user_id` , `deal_cate` , `deal_money` , `new_money` , `add_time` , `status`) VALUES (122 , 4 , 304.8192 , 340.7292 , '2019-01-03 11:15:02' , 1) [ RunTime:0.000623s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `balance`=balance+304.8192  WHERE  (  id=122 ) [ RunTime:0.000642s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `amount_money`=amount_money+304.8192  WHERE  (  id=122 ) [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2150 ) [ RunTime:0.005204s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2150 and order_status=1 ) LIMIT 1 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2150 ) [ RunTime:0.003302s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2150 ) [ RunTime:0.002285s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2150 ) [ RunTime:0.002229s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `win_money`=24.385536,`is_win`=1  WHERE  (  order_id=2150 ) [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  (  id=217 ) LIMIT 1 [ RunTime:0.000600s ]
+[ sql ] [ SQL ] INSERT INTO `account_details` (`user_id` , `deal_cate` , `deal_money` , `new_money` , `add_time` , `status`) VALUES (217 , 4 , 24.385536 , 24.385536 , '2019-01-03 11:15:02' , 1) [ RunTime:0.000582s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `balance`=balance+24.385536  WHERE  (  id=217 ) [ RunTime:0.000510s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `amount_money`=amount_money+24.385536  WHERE  (  id=217 ) [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2152 ) [ RunTime:0.001995s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2165 ) [ RunTime:0.002022s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2175 ) [ RunTime:0.002122s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2180 ) [ RunTime:0.001955s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2196 ) [ RunTime:0.002062s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2196 and order_status=1 ) LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2196 ) [ RunTime:0.002379s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2196 ) [ RunTime:0.002672s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2196 ) [ RunTime:0.002973s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2196 ) [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2229 ) [ RunTime:0.003272s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2236 ) [ RunTime:0.002020s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2239 ) [ RunTime:0.002050s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2239 and order_status=1 ) LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2239 ) [ RunTime:0.002319s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2239 ) [ RunTime:0.002769s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2239 ) [ RunTime:0.002444s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2239 ) [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2242 ) [ RunTime:0.002233s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2243 ) [ RunTime:0.002814s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2243 and order_status=1 ) LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2243 ) [ RunTime:0.002593s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2243 ) [ RunTime:0.002932s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2243 ) [ RunTime:0.002757s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2243 ) [ RunTime:0.000554s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `status`=0  WHERE  (  id=171 ) [ RunTime:0.000629s ]
+[ log ] 结算成功:game_id=171
+[ log ] 结算成功:171
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000624s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `home_score`=126,`road_score`=121,`win_team`='篮网'  WHERE  (  id=173 ) [ RunTime:0.000590s ]
+[ log ] 比分修改成功:173
+[ sql ] [ SQL ] SELECT * FROM `nba_game` WHERE  (  id=173 ) LIMIT 1 [ RunTime:0.000615s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=173 and cate_code="home_win" ) [ RunTime:0.002647s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=173 and cate_code="road_win" ) [ RunTime:0.003005s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=173 and cate_code like "%differ_%" ) [ RunTime:0.001939s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=173 and cate_code="differ_home_5" ) [ RunTime:0.001809s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=173 and cate_code="let_score_home_win" ) [ RunTime:0.002100s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=173 and cate_code="let_score_road_win" ) [ RunTime:0.002269s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=173 and cate_code="total_big" ) [ RunTime:0.002077s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=173 and cate_code="total_small" ) [ RunTime:0.001906s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 ) [ RunTime:0.001217s ]
+[ sql ] [ SQL ] UPDATE order_info oi  INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` SET `win_game_result`='3098,3100,3102,3109'  WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=173 and oi.game_status=0 ) [ RunTime:0.004438s ]
+[ sql ] [ SQL ] SELECT * FROM order_info oi INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=173 and oi.game_status=0 ) [ RunTime:0.003703s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3101 ) LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.001219s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.001267s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3102',`game_status`=1  WHERE  (  order_info_id=8908 ) [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3101 ) LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.001286s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.001197s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3102',`game_status`=1  WHERE  (  order_info_id=8911 ) [ RunTime:0.000449s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3098',`game_status`=1  WHERE  (  order_info_id=9043 ) [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3099 ) LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_road_win" ) LIMIT 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.001344s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.001262s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3101 ) LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.001270s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.001272s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3100,3102',`game_status`=1  WHERE  (  order_info_id=9100 ) [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3101 ) LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_small" ) LIMIT 1 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.001997s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.001911s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3102',`game_status`=1  WHERE  (  order_info_id=9164 ) [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3103 ) LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="differ_road_5" ) LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=4 ) [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_road_5" ) LIMIT 1 [ RunTime:0.001912s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_road_10" ) LIMIT 1 [ RunTime:0.002031s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_road_15" ) LIMIT 1 [ RunTime:0.002059s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_road_20" ) LIMIT 1 [ RunTime:0.002031s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_road_25" ) LIMIT 1 [ RunTime:0.002188s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_road_26" ) LIMIT 1 [ RunTime:0.002253s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_home_5" ) LIMIT 1 [ RunTime:0.002207s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_home_10" ) LIMIT 1 [ RunTime:0.003146s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_home_15" ) LIMIT 1 [ RunTime:0.002516s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_home_20" ) LIMIT 1 [ RunTime:0.002198s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_home_25" ) LIMIT 1 [ RunTime:0.002263s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="differ_home_26" ) LIMIT 1 [ RunTime:0.002185s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3109',`game_status`=1  WHERE  (  order_info_id=9364 ) [ RunTime:0.000734s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3099 ) LIMIT 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_road_win" ) LIMIT 1 [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002322s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=173 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002272s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3100',`game_status`=1  WHERE  (  order_info_id=9447 ) [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2139 ) [ RunTime:0.004614s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2139 and order_status=1 ) LIMIT 1 [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2139 ) [ RunTime:0.004541s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2139 ) [ RunTime:0.005016s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2139 ) [ RunTime:0.004674s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2139 ) [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2140 ) [ RunTime:0.004021s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2140 and order_status=1 ) LIMIT 1 [ RunTime:0.000967s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2140 ) [ RunTime:0.004448s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2140 ) [ RunTime:0.004873s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2140 ) [ RunTime:0.004181s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2140 ) [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2165 ) [ RunTime:0.006364s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2178 ) [ RunTime:0.005253s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2193 ) [ RunTime:0.004678s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2193 and order_status=1 ) LIMIT 1 [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2193 ) [ RunTime:0.002366s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2193 ) [ RunTime:0.002473s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2193 ) [ RunTime:0.002642s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2193 ) [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2229 ) [ RunTime:0.002506s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2251 ) [ RunTime:0.002466s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2251 and order_status=1 ) LIMIT 1 [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2251 ) [ RunTime:0.002986s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2251 ) [ RunTime:0.003201s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2251 ) [ RunTime:0.002782s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2251 ) [ RunTime:0.000623s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `status`=0  WHERE  (  id=173 ) [ RunTime:0.000658s ]
+[ log ] 结算成功:game_id=173
+[ log ] 结算成功:173
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000882s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `home_score`=84,`road_score`=112,`win_team`='魔术'  WHERE  (  id=174 ) [ RunTime:0.000795s ]
+[ log ] 比分修改成功:174
+[ sql ] [ SQL ] SELECT * FROM `nba_game` WHERE  (  id=174 ) LIMIT 1 [ RunTime:0.000757s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=174 and cate_code="home_win" ) [ RunTime:0.004513s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=174 and cate_code="road_win" ) [ RunTime:0.002567s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=174 and cate_code like "%differ_%" ) [ RunTime:0.001949s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=174 and cate_code="differ_road_26" ) [ RunTime:0.001977s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=174 and cate_code="let_score_home_win" ) [ RunTime:0.001846s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=174 and cate_code="let_score_road_win" ) [ RunTime:0.002083s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=174 and cate_code="total_big" ) [ RunTime:0.003123s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=174 and cate_code="total_small" ) [ RunTime:0.003066s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=174 and is_win=1 ) [ RunTime:0.001309s ]
+[ sql ] [ SQL ] UPDATE order_info oi  INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` SET `win_game_result`='3115,3117,3120,3126'  WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=174 and oi.game_status=0 ) [ RunTime:0.004757s ]
+[ sql ] [ SQL ] SELECT * FROM order_info oi INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=174 and oi.game_status=0 ) [ RunTime:0.004787s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3117',`game_status`=1  WHERE  (  order_info_id=8962 ) [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3118 ) LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=174 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.001465s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=174 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.001375s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3117',`game_status`=1  WHERE  (  order_info_id=9101 ) [ RunTime:0.000828s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3118 ) LIMIT 1 [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=174 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002426s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=174 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.001899s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3117',`game_status`=1  WHERE  (  order_info_id=9455 ) [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2152 ) [ RunTime:0.002810s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2152 and order_status=1 ) LIMIT 1 [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2152 ) [ RunTime:0.005670s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2152 ) [ RunTime:0.004709s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2152 ) [ RunTime:0.005278s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `win_money`=55.5006816,`is_win`=1  WHERE  (  order_id=2152 ) [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  (  id=217 ) LIMIT 1 [ RunTime:0.000924s ]
+[ sql ] [ SQL ] INSERT INTO `account_details` (`user_id` , `deal_cate` , `deal_money` , `new_money` , `add_time` , `status`) VALUES (217 , 4 , 55.5006816 , 79.8906816 , '2019-01-03 11:15:02' , 1) [ RunTime:0.000676s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `balance`=balance+55.5006816  WHERE  (  id=217 ) [ RunTime:0.000641s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `amount_money`=amount_money+55.5006816  WHERE  (  id=217 ) [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2178 ) [ RunTime:0.002087s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2178 and order_status=1 ) LIMIT 1 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2178 ) [ RunTime:0.002332s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2178 ) [ RunTime:0.002828s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2178 ) [ RunTime:0.002997s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2178 ) [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2255 ) [ RunTime:0.003223s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `status`=0  WHERE  (  id=174 ) [ RunTime:0.000690s ]
+[ log ] 结算成功:game_id=174
+[ log ] 结算成功:174
+---------------------------------------------------------------
+[ 2019-01-03T11:20:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.015592s][吞吐率：64.14req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001671s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000673s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:25:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017768s][吞吐率：56.28req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000942s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002642s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000637s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:30:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.017761s][吞吐率：56.30req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000880s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.002458s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 11:30:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001503s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T11:30:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.018542s][吞吐率：53.93req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000972s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002358s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000729s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:30:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.236110s][吞吐率：4.24req/s] [内存消耗：503.62kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000669s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.001411s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 11:30:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.001114s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.000896s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000773s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000911s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000837s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.000772s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.000752s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `home_score`=94,`road_score`=101,`win_team`='活塞'  WHERE  (  id=175 ) [ RunTime:0.000770s ]
+[ log ] 比分修改成功:175
+[ sql ] [ SQL ] SELECT * FROM `nba_game` WHERE  (  id=175 ) LIMIT 1 [ RunTime:0.000788s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game_cate` [ RunTime:0.001873s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=175 and cate_code="home_win" ) [ RunTime:0.003806s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=175 and cate_code="road_win" ) [ RunTime:0.003462s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=175 and cate_code like "%differ_%" ) [ RunTime:0.003985s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=175 and cate_code="differ_road_10" ) [ RunTime:0.003588s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=175 and cate_code="let_score_home_win" ) [ RunTime:0.003551s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=175 and cate_code="let_score_road_win" ) [ RunTime:0.003803s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=2  WHERE  (  game_id=175 and cate_code="total_big" ) [ RunTime:0.003427s ]
+[ sql ] [ SQL ] UPDATE `nba_game_cate`  SET `is_win`=1  WHERE  (  game_id=175 and cate_code="total_small" ) [ RunTime:0.003579s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 ) [ RunTime:0.002165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_info` [ RunTime:0.001977s ]
+[ sql ] [ SQL ] UPDATE order_info oi  INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` SET `win_game_result`='3133,3135,3137,3140'  WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=175 and oi.game_status=0 ) [ RunTime:0.008605s ]
+[ sql ] [ SQL ] SELECT * FROM order_info oi INNER JOIN `order` `o` ON `oi`.`order_id`=`o`.`order_id` WHERE  (  o.order_status=1 and oi.game_cate=2 and oi.game_id=175 and oi.game_status=0 ) [ RunTime:0.007802s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3136 ) LIMIT 1 [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_code` [ RunTime:0.002019s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="let_score_home_win" ) LIMIT 1 [ RunTime:0.000622s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=2 ) [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="let_score_road_win" ) LIMIT 1 [ RunTime:0.002333s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="let_score_home_win" ) LIMIT 1 [ RunTime:0.002523s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3135',`game_status`=1  WHERE  (  order_info_id=9044 ) [ RunTime:0.000725s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9097 ) [ RunTime:0.000732s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9161 ) [ RunTime:0.000705s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9365 ) [ RunTime:0.000575s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9400 ) [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3138 ) LIMIT 1 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002552s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002716s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9401 ) [ RunTime:0.000716s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9408 ) [ RunTime:0.000694s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9417 ) [ RunTime:0.000635s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9423 ) [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3138 ) LIMIT 1 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002837s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002232s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9449 ) [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT `cate_code` FROM `nba_game_cate` WHERE  (  cate_id=3138 ) LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT `code_pid` FROM `nba_code` WHERE  (  code="total_big" ) LIMIT 1 [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT `code` FROM `nba_code` WHERE  (  code_pid=3 ) [ RunTime:0.000612s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="total_small" ) LIMIT 1 [ RunTime:0.002672s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `nba_game_cate` WHERE  (  game_id=175 and is_win=1 and cate_code ="total_big" ) LIMIT 1 [ RunTime:0.002475s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3137',`game_status`=1  WHERE  (  order_info_id=9452 ) [ RunTime:0.000792s ]
+[ sql ] [ SQL ] UPDATE `order_info`  SET `win_result`='3135',`game_status`=1  WHERE  (  order_info_id=9456 ) [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2165 ) [ RunTime:0.004695s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2177 ) [ RunTime:0.004419s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2192 ) [ RunTime:0.004136s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.001703s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2192 and order_status=1 ) LIMIT 1 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2192 ) [ RunTime:0.004569s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2192 ) [ RunTime:0.004680s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2192 ) [ RunTime:0.004458s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `win_money`=684.18,`is_win`=1  WHERE  (  order_id=2192 ) [ RunTime:0.000980s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002464s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  (  id=180 ) LIMIT 1 [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account_details` [ RunTime:0.001982s ]
+[ sql ] [ SQL ] INSERT INTO `account_details` (`user_id` , `deal_cate` , `deal_money` , `new_money` , `add_time` , `status`) VALUES (180 , 4 , 684.18 , 4131.62 , '2019-01-03 11:30:02' , 1) [ RunTime:0.000726s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `balance`=balance+684.18  WHERE  (  id=180 ) [ RunTime:0.000672s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `amount_money`=amount_money+684.18  WHERE  (  id=180 ) [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2229 ) [ RunTime:0.005016s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2236 ) [ RunTime:0.004773s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2236 and order_status=1 ) LIMIT 1 [ RunTime:0.000826s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2236 ) [ RunTime:0.004861s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2236 ) [ RunTime:0.004769s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2236 ) [ RunTime:0.004912s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `win_money`=7.2576,`is_win`=1  WHERE  (  order_id=2236 ) [ RunTime:0.000840s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  (  id=58 ) LIMIT 1 [ RunTime:0.000792s ]
+[ sql ] [ SQL ] INSERT INTO `account_details` (`user_id` , `deal_cate` , `deal_money` , `new_money` , `add_time` , `status`) VALUES (58 , 4 , 7.2576 , 8.6876 , '2019-01-03 11:30:02' , 1) [ RunTime:0.000505s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `balance`=balance+7.2576  WHERE  (  id=58 ) [ RunTime:0.000442s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `amount_money`=amount_money+7.2576  WHERE  (  id=58 ) [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2237 ) [ RunTime:0.002395s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2240 ) [ RunTime:0.004137s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2240 and order_status=1 ) LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2240 ) [ RunTime:0.002851s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2240 ) [ RunTime:0.002890s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2240 ) [ RunTime:0.003081s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `win_money`=61.5762,`is_win`=1  WHERE  (  order_id=2240 ) [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  (  id=58 ) LIMIT 1 [ RunTime:0.000652s ]
+[ sql ] [ SQL ] INSERT INTO `account_details` (`user_id` , `deal_cate` , `deal_money` , `new_money` , `add_time` , `status`) VALUES (58 , 4 , 61.5762 , 70.2662 , '2019-01-03 11:30:02' , 1) [ RunTime:0.000472s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `balance`=balance+61.5762  WHERE  (  id=58 ) [ RunTime:0.000435s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `amount_money`=amount_money+61.5762  WHERE  (  id=58 ) [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2242 ) [ RunTime:0.002827s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2242 and order_status=1 ) LIMIT 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2242 ) [ RunTime:0.002312s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2242 ) [ RunTime:0.002366s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2242 ) [ RunTime:0.002547s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2242 ) [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2244 ) [ RunTime:0.002378s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  game_cate=2 and order_id=2244 and order_status=1 ) LIMIT 1 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT `dan`,`tz_result` FROM `order_info` WHERE  (  game_cate=2 and order_id=2244 ) [ RunTime:0.003324s ]
+[ sql ] [ SQL ] SELECT `dan`,win_result tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2244 ) [ RunTime:0.002684s ]
+[ sql ] [ SQL ] SELECT `dan`,tz_odds tz_result FROM `order_info` WHERE  (  game_cate=2 and order_id=2244 ) [ RunTime:0.002554s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `is_win`=2  WHERE  (  order_id=2244 ) [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2253 ) [ RunTime:0.002409s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2254 ) [ RunTime:0.002432s ]
+[ sql ] [ SQL ] SELECT `game_status` FROM `order_info` WHERE  (  game_cate=2 and order_id=2255 ) [ RunTime:0.002418s ]
+[ sql ] [ SQL ] UPDATE `nba_game`  SET `status`=0  WHERE  (  id=175 ) [ RunTime:0.000485s ]
+[ log ] 结算成功:game_id=175
+[ log ] 结算成功:175
+---------------------------------------------------------------
+[ 2019-01-03T11:35:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.013098s][吞吐率：76.35req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001542s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000716s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:40:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.013519s][吞吐率：73.97req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000967s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001763s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000788s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:45:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.015819s][吞吐率：63.21req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000783s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001841s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000755s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:45:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.009877s][吞吐率：101.25req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000812s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001168s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 11:45:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000614s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T11:45:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.246636s][吞吐率：4.05req/s] [内存消耗：503.62kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000842s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.002015s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 11:45:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001017s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.001166s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.000926s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000784s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000842s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000975s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.000789s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.000847s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0
+---------------------------------------------------------------
+[ 2019-01-03T11:50:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.013296s][吞吐率：75.21req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000932s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002114s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000883s ]
+---------------------------------------------------------------
+[ 2019-01-03T11:55:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.019699s][吞吐率：50.76req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001023s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001985s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000967s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.012099s][吞吐率：82.65req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.002069s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 12:00:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000957s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T12:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.014533s][吞吐率：68.81req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002147s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000716s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.241793s][吞吐率：4.14req/s] [内存消耗：503.62kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000741s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.002339s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 12:00:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.000994s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.000982s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.001007s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000745s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000838s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.000764s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.001547s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0
+---------------------------------------------------------------
+[ 2019-01-03T12:05:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017243s][吞吐率：57.99req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000853s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001912s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000782s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:10:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.019202s][吞吐率：52.08req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001051s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002102s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000942s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:15:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.014300s][吞吐率：69.93req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000850s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002078s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000812s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:15:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.139884s][吞吐率：7.15req/s] [内存消耗：503.62kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001082s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.001972s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 12:15:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000855s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.001088s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.000926s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000890s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+---------------------------------------------------------------
+[ 2019-01-03T12:15:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.011265s][吞吐率：88.77req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001775s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 12:15:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000993s ]
+[ log ] 暂无可结算比赛!~
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000962s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000808s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.000532s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.000870s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0
+---------------------------------------------------------------
+[ 2019-01-03T12:20:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.012195s][吞吐率：82.00req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001121s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001433s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000701s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:25:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017060s][吞吐率：58.62req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000965s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002422s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.001115s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:30:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.024732s][吞吐率：40.43req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001005s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001578s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 12:30:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000934s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T12:30:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.015286s][吞吐率：65.42req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000971s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001802s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000649s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:30:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.239772s][吞吐率：4.17req/s] [内存消耗：503.62kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000938s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.001642s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 12:30:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.001057s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.000930s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000828s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000727s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000776s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.000896s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.000956s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0
+---------------------------------------------------------------
+[ 2019-01-03T12:35:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.018447s][吞吐率：54.21req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000800s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001988s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000748s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:40:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017613s][吞吐率：56.78req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000848s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001630s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000769s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:45:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.014701s][吞吐率：68.02req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001094s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 12:45:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000650s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T12:45:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016870s][吞吐率：59.28req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001064s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002101s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000956s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:45:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.240476s][吞吐率：4.16req/s] [内存消耗：504.42kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000944s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.001922s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 12:45:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000903s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.000781s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.001028s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000837s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000923s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000881s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.000807s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.000861s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="308" and home_team="太阳" and road_team="76人" and status>0 ) LIMIT 1 [ RunTime:0.000833s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="308" and home_team="太阳" and road_team="76人" and status>0
+---------------------------------------------------------------
+[ 2019-01-03T12:50:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.020830s][吞吐率：48.01req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000834s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001757s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000703s ]
+---------------------------------------------------------------
+[ 2019-01-03T12:55:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.017368s][吞吐率：57.58req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000785s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001015s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000482s ]
+---------------------------------------------------------------
+[ 2019-01-03T13:00:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.018191s][吞吐率：54.97req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000690s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.001522s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000864s ]
+---------------------------------------------------------------
+[ 2019-01-03T13:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.015057s][吞吐率：66.41req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000751s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.001703s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 13:00:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001009s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T13:00:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.371853s][吞吐率：2.69req/s] [内存消耗：504.42kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001036s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.002083s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 13:00:02" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.001167s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.000807s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000869s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000845s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.000889s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.000950s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.000784s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="308" and home_team="太阳" and road_team="76人" and status>0 ) LIMIT 1 [ RunTime:0.001090s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="308" and home_team="太阳" and road_team="76人" and status>0
+---------------------------------------------------------------
+[ 2019-01-03T13:05:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.016965s][吞吐率：58.95req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000809s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002096s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.000882s ]
+---------------------------------------------------------------
+[ 2019-01-03T13:10:02+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.022261s][吞吐率：44.92req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001037s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002456s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.001060s ]
+---------------------------------------------------------------
+[ 2019-01-03T13:15:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/xunjian
+[ info ] www.zhxbg.com/reptile/auto/xunjian [运行时间：0.018141s][吞吐率：55.12req/s] [内存消耗：497.48kb] [文件加载：53]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'xunjian',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->xunjian[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000652s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_hm_desc` [ RunTime:0.002650s ]
+[ sql ] [ SQL ] SELECT * FROM `order_hm_desc` WHERE  (  hm_status=1 ) [ RunTime:0.001023s ]
+---------------------------------------------------------------
+[ 2019-01-03T13:15:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/fb_over
+[ info ] www.zhxbg.com/reptile/auto/fb_over [运行时间：0.015991s][吞吐率：62.54req/s] [内存消耗：406.71kb] [文件加载：49]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'fb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->fb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000808s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fb_game` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `fb_game` WHERE  (  status=2 and end_time <"2019-01-03 13:15:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.001028s ]
+[ log ] 暂无可结算比赛!~
+---------------------------------------------------------------
+[ 2019-01-03T13:15:01+08:00 ] 45.248.68.235 45.248.68.235 GET /reptile/auto/bb_over
+[ info ] www.zhxbg.com/reptile/auto/bb_over [运行时间：0.132102s][吞吐率：7.57req/s] [内存消耗：504.42kb] [文件加载：51]
+[ info ] [ LANG ] /data/www/default/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'reptile',
+    1 => 'auto',
+    2 => 'bb_over',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'www.zhxbg.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\reptile\controller\Auto->bb_over[ /data/www/default/application/reptile/controller/Auto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001007s ] mysql:host=127.0.0.1;port=3306;dbname=cp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nba_game` [ RunTime:0.001825s ]
+[ sql ] [ SQL ] SELECT `end_time` FROM `nba_game` WHERE  (  status=2 and end_time <"2019-01-03 13:15:01" ) ORDER BY `end_time`  asc LIMIT 1 [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0 ) LIMIT 1 [ RunTime:0.001259s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="303" and home_team="奇才" and road_team="老鹰" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0 ) LIMIT 1 [ RunTime:0.001024s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="301" and home_team="黄蜂" and road_team="独行侠" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0 ) LIMIT 1 [ RunTime:0.000824s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="302" and home_team="骑士" and road_team="热火" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0 ) LIMIT 1 [ RunTime:0.000836s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="304" and home_team="篮网" and road_team="鹈鹕" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0 ) LIMIT 1 [ RunTime:0.001034s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="306" and home_team="公牛" and road_team="魔术" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0 ) LIMIT 1 [ RunTime:0.001130s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="305" and home_team="凯尔特人" and road_team="森林狼" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0 ) LIMIT 1 [ RunTime:0.001143s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="307" and home_team="灰熊" and road_team="活塞" and status>0
+[ sql ] [ SQL ] SELECT `id` FROM `nba_game` WHERE  (  week="周三" and game_no="308" and home_team="太阳" and road_team="76人" and status>0 ) LIMIT 1 [ RunTime:0.000866s ]
+[ log ] 该场比赛已结算:week="周三" and game_no="308" and home_team="太阳" and road_team="76人" and status>0

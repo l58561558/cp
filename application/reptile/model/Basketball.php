@@ -8,10 +8,12 @@ use think\Log;
 use think\Db;
 class Basketball extends Model {
     
+    public $game_cate=2;
+    
     function __construct(){
         Log::init([
             'type' =>  'File',
-            'path' =>  LOG_PATH,
+            'path' =>  ROOT_PATH.'/logs/over/',
         ]);
     }
 
@@ -174,6 +176,7 @@ class Basketball extends Model {
                     $chuan = explode(',', $order['chuan']);
                     $order_tz_data = array();
                     $order_win_data = array();
+                    $order_tz_odds_data = array();
                     for ($i=0; $i < count($chuan); $i++) { 
                         $get_tz_data = $Group->get_group($chuan[$i],$order_tz_result);
                         for ($j=0; $j < count($get_tz_data); $j++) { 
@@ -331,5 +334,18 @@ class Basketball extends Model {
             Db::rollback();
         }
         return $res;
+    }
+
+    public function rank($score)
+    {
+        switch (true) 
+        {
+            case $score > 25:  return 26;
+            case $score > 20:  return 25;
+            case $score > 15:  return 20;
+            case $score > 10:  return 15;
+            case $score > 5:   return 10;
+            case $score > 0:   return 5;
+        }
     }
 }

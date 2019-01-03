@@ -250,8 +250,8 @@ class Games extends Base {
     				$id = db('nba_game')
 						->where('week','=',$nba_game['week'])
 						->where('game_no','=',$nba_game['game_no'])
-						->where('home_team="'.$fb_game['home_team'].'"')
-						->where('road_team="'.$fb_game['road_team'].'"')
+						->where('home_team="'.$nba_game['home_team'].'"')
+						->where('road_team="'.$nba_game['road_team'].'"')
 						// ->where('end_time="'.$nba_game['end_time'].'"')
 						->value('id');
 					if(!empty($id) && $id >0){
