@@ -22,9 +22,11 @@ class Index extends Base
         exit;
     }
 
-    public function article()
+    public function article($page=1, $count=10)
     {
-        $list = db('article')->field('article_id,title,pic,add_time')->order('add_time desc')->limit(3)->select();
+        $start = ($page-1)*$count;
+        $list = db('article')->field('article_id,title,pic,add_time')->order('add_time desc')->limit($start, $count)->select();
+        
         foreach ($list as $key => $value) {
             $list[$key]['pic'] = config('uploads_path.web').'article/'.$list[$key]['pic'];
             $list[$key]['url'] = 'https://'.$_SERVER['HTTP_HOST'].DS.'home/index/article_desc?article_id='.$list[$key]['article_id'];
@@ -32,6 +34,7 @@ class Index extends Base
         echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$list]);
         exit;
     }
+    
     public function article_desc($article_id)
     {
         $list = db('article')->where('article_id='.$article_id)->find();
@@ -45,6 +48,9 @@ class Index extends Base
         $data = db('account_details')->field('id,user_id,deal_cate,deal_money,add_time')->where('add_time>="'.$start.'"')->order('add_time desc')->select();
         foreach ($data as $key => $value) {
             $data[$key]['user_name'] = db('user')->where('id='.$data[$key]['user_id'])->value('user_name');
+            if(strlen($data[$key]['user_name']) > 3){
+                $data[$key]['user_name'] = name_substr_cut($data[$key]['user_name']);
+            }
         }
 
         echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$data]);

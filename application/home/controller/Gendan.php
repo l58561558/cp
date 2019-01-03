@@ -347,14 +347,27 @@ class Gendan extends Base
     }
 
     // 跟单列表
-    public function gendan_list($type, $page=1, $count=10)
+    /*
+    *$type=1  发单金额
+    *$type=2  胜率
+    *$type=3  发单时间
+    */
+    public function gendan_list($type=1, $page=1, $count=10)
     {
         $start = ($page-1)*$count;
-        $list = db('order_gd_desc')->where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->limit($start, $count)->select();
-        $data = array();
 
+        if($type == 1){
+            $list = db('order_gd_desc')where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('gd_money','desc')->limit($start, $count)->select();
+        }else if($type == 2){
+            $list = db('order_gd_desc')where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
+        }else if($type == 3){
+            $list = db('order_gd_desc')where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
+        }
+        
+        $data = array();
         if(!empty($list)){
             foreach ($list as $key => $value) {
+                $order = db('order')->where('order_id='.$list[$key]['order_id'])->find();
                 $order_gd_user = db('order_gd_user')->where('gd_id='.$list[$key]['gd_id'].' and user_id='.$list[$key]['user_id'])->find();
                 $data[$key]['user_id'] = $list[$key]['user_id'];
                 $data[$key]['order_id'] = $list[$key]['order_id'];
@@ -371,9 +384,23 @@ class Gendan extends Base
                 $data[$key]['pay_money'] = $order_gd_user['pay_money'];
                 $data[$key]['pay_num'] = $order_gd_user['pay_num'];
                 $data[$key]['one_money'] = $list[$key]['gd_money'];
-            }    
+                if($type == 2){
+                    $total_count = db('order')->where('order_type=3 and order_status=1 and is_win>0 and user_id='.$list[$key]['user_id'])->count();
+                    $win_count = db('order')->where('order_type=3 and order_status=1 and is_win=1 and user_id='.$list[$key]['user_id'])->count();
+                    $win_rate = round($win_count/$total_count, 2);
+                    $data[$key]['win_rate'] = $win_rate;
+                }
+            }
+            
+            if($type == 2){
+                $sort = array();
+                foreach($data as $value){
+                    $sort[] = $value["win_rate"];
+                }
+                array_multisort($sort,SORT_DESC,$data);
+            }
         }
-        
+
         echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$data]);
         exit;
     }

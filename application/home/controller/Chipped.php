@@ -363,10 +363,17 @@ class Chipped extends Base
     }
 
     // 合买列表
-    public function chipped_list($page=1, $count=10)
+    public function chipped_list($type=1, $page=1, $count=10)
     {
         $start = ($page-1)*$count;
-        $list = db('order_hm_desc')->where('residue_num>0 and hm_status=1 and end_time>="'.date('Y-m-d H:i:s').'"')->limit($start, $count)->select();
+
+        if($type == 1){
+            $list = db('order_hm_desc')->where('residue_num>0 and hm_status=1 and end_time>="'.date('Y-m-d H:i:s').'"')->order('hm_money','desc')->limit($start, $count)->select();
+        }else if($type == 2){
+            $list = db('order_hm_desc')->where('residue_num>0 and hm_status=1 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
+        }else if($type == 3){
+            $list = db('order_hm_desc')->where('residue_num>0 and hm_status=1 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
+        }
         $data = array();
 
         if(!empty($list)){
@@ -385,7 +392,20 @@ class Chipped extends Base
                 $data[$key]['self_money'] = $list[$key]['pay_num'] * $list[$key]['one_money']; // 自购金额
                 $data[$key]['residue_num'] = $list[$key]['residue_num'];
                 $data[$key]['one_money'] = $list[$key]['one_money'];
-            }    
+                if($type == 2){
+                    $total_count = db('order')->where('order_type=3 and order_status=1 and is_win>0 and user_id='.$list[$key]['user_id'])->count();
+                    $win_count = db('order')->where('order_type=3 and order_status=1 and is_win=1 and user_id='.$list[$key]['user_id'])->count();
+                    $win_rate = round($win_count/$total_count, 2);
+                    $data[$key]['win_rate'] = $win_rate;
+                }
+            }
+            if($type == 2){
+                $sort = array();
+                foreach($data as $value){
+                    $sort[] = $value["win_rate"];
+                }
+                array_multisort($sort,SORT_DESC,$data);
+            }
         }
         
         echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$data]);
