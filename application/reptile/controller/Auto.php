@@ -38,12 +38,15 @@ class Auto extends Base
 	        			$score = explode(':', $arr['down_score']);
 	        			$arr['total_score'] = $score[0]+$score[1];
 	        			$res = db('fb_game')->where('id='.$game_id)->update($arr);
-	        			if($res > 0){
-	        				Log::write('比分修改成功:'.$game_id);
+	        			Log::write('比分修改成功:'.$game_id);
+        				$over_res = $Football->fb_over($game_id);
+	        			if($over_res > 0){
+	        				echo "结算成功";
+	        				Log::write('结算成功:'.$game_id);
 	        				Db::commit();
-	        				$Football->fb_over($game_id);
 	        			}else{
 	        				Log::write('比分修改失败:'.$game_id);
+	        				Db::rollback();
 	        			}
 	        		}else{
 	        			Log::write('该场比赛已结算:'.$where);
@@ -92,12 +95,15 @@ class Auto extends Base
 	                        } 
 			            }
 	        			$res = db('nba_game')->where('id='.$game_id)->update($arr);
-	        			if($res > 0){
-	        				Log::write('比分修改成功:'.$game_id);
+	        			Log::write('比分修改成功:'.$game_id);
+        				$over_res = $Basketball->nba_over($game_id);
+	        			if($over_res > 0){
+	        				echo "结算成功";
+	        				Log::write('结算成功:'.$game_id);
 	        				Db::commit();
-	        				$Basketball->nba_over($game_id);
 	        			}else{
 	        				Log::write('比分修改失败:'.$game_id);
+	        				Db::rollback();
 	        			}
 	        		}else{
 	        			Log::write('该场比赛已结算:'.$where);

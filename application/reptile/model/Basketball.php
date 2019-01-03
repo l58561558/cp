@@ -5,6 +5,7 @@ use app\adminz\model\Detail;
 use app\home\model\Group;
 use think\Model;
 use think\Log;
+use think\Db;
 class Basketball extends Model {
     
     function __construct(){
@@ -323,13 +324,12 @@ class Basketball extends Model {
         if($res > 0) {
             // 提交事务
             Db::commit();
-            echo "结算成功";
             Log::write('结算成功:game_id='.$id);
         }else{
             Log::write('比赛已结算:game_id='.$id);
-            echo "比赛已结算,请勿重复提交";
             // 回滚事务
             Db::rollback();
         }
+        return $res;
     }
 }
