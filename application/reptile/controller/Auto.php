@@ -41,7 +41,6 @@ class Auto extends Base
 	        			Log::write('比分修改成功:'.$game_id);
         				$over_res = $Football->fb_over($game_id);
 	        			if($over_res > 0){
-	        				echo "结算成功";
 	        				Log::write('结算成功:'.$game_id);
 	        				Db::commit();
 	        			}else{
@@ -98,7 +97,6 @@ class Auto extends Base
 	        			Log::write('比分修改成功:'.$game_id);
         				$over_res = $Basketball->nba_over($game_id);
 	        			if($over_res > 0){
-	        				echo "结算成功";
 	        				Log::write('结算成功:'.$game_id);
 	        				Db::commit();
 	        			}else{
