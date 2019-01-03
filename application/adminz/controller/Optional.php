@@ -247,10 +247,10 @@ class Optional extends Base
                     'win_result' => $game_info['match_result'],
                     'game_status' => 1
                 ]);
-            if (!$update_match_result) {
-                Db::rollback();
-                $this->error('数据库保存失败！');
-            }
+//            if (!$update_match_result) {
+//                Db::rollback();
+//                $this->error('数据库保存失败！');
+//            }
         }
         $order_infos = \db('order_info')
             ->whereIn('game_id', implode(',', $game_info_ids))
@@ -266,7 +266,6 @@ class Optional extends Base
         $order_lists = [];
         foreach ($order_ids as $order_id => $game_cate) {
             $order_lists[$order_id] = [
-//                'user_id' => 0,
                 'game_cate' => $game_cate,
                 'right_game_ids' => [],
                 'bet_lists' => [],
