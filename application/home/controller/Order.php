@@ -542,7 +542,7 @@ class Order extends Base
         }
         $res = db('order')->where('order_id='.$order_id)->setField('is_delete',1);
         if($res > 0){
-            echo json_encode(['msg'=>'删除成功','code'=>1,'success'=>true,'data'=>$data]);
+            echo json_encode(['msg'=>'删除成功','code'=>1,'success'=>true]);
             exit;
         }
         

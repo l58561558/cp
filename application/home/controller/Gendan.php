@@ -346,6 +346,14 @@ class Gendan extends Base
         }
     }
 
+    public function god_list()
+    {
+        $data = db('user')->field('id,user_name,head_img')->where('status=0 and is_god=1 and is_god_order>0')->order('is_god_order','asc')->limit(8)->select();
+        echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$data]);
+        exit;
+    }
+
+
     // 跟单列表
     /*
     *$type=1  发单金额
@@ -357,11 +365,11 @@ class Gendan extends Base
         $start = ($page-1)*$count;
 
         if($type == 1){
-            $list = db('order_gd_desc')where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('gd_money','desc')->limit($start, $count)->select();
+            $list = db('order_gd_desc')->where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('gd_money','desc')->limit($start, $count)->select();
         }else if($type == 2){
-            $list = db('order_gd_desc')where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
+            $list = db('order_gd_desc')->where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
         }else if($type == 3){
-            $list = db('order_gd_desc')where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
+            $list = db('order_gd_desc')->where('gd_status=2 and end_time>="'.date('Y-m-d H:i:s').'"')->order('add_time','desc')->limit($start, $count)->select();
         }
         
         $data = array();

@@ -15,7 +15,8 @@
 				<th>修改时间</th>
 				<th>最后登录时间</th>
 				<th>最后登录IP</th>
-				<th>登录机型</th>
+				<th>大神</th>
+				<th>大神排序</th>
 				<th>用户状态</th>
 				<th style="width: 140px">操作</th>
             </tr>
@@ -34,7 +35,16 @@
 					<td>{$info.edit_time|default=' - '}</td>
 					<td>{$info.last_login_time}</td>
 					<td>{$info.last_ip|default=' - '}</td>
-					<td>{$info.user_agent|default=' - '}</td>
+					<td style="text-align: center;">
+						{if $info.is_god eq 1}
+							<a class='btn-field' name='is_god' href='javascript:;' title='点击更改状态' data-status='0' data-id='{$info.id}'' data-url="{:url('user/user_edit_field')}"><i class='fa fa-check'></i></a>
+						{else /}
+							<a class='btn-field' name='is_god' href='javascript:;' title='点击更改状态' data-status='1' data-id='{$info.id}' data-url="{:url('user/user_edit_field')}"><i class='fa fa-close'></i></a>
+						{/if}
+				  	</td>
+				  	<td style="text-align: center;">
+				  		<input style="text-align: center;" class="inputs" data-id="{$info.id}" data-url="{:url('user/user_edit_field')}" name="is_god_order" type="text" value="{$info.is_god_order}" >
+      				</td>
 					{if condition="$info['status'] eq 0"}
 					<td style="color: green">正常玩家</td>
 					{else/}

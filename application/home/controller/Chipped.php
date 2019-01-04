@@ -362,6 +362,13 @@ class Chipped extends Base
         }
     }
 
+    public function god_list()
+    {
+        $data = db('user')->field('id,user_name,head_img')->where('status=0 and is_god=1 and is_god_order>0')->order('is_god_order','asc')->limit(8)->select();
+        echo json_encode(['msg'=>'请求成功','code'=>1,'success'=>true,'data'=>$data]);
+        exit;
+    }
+
     // 合买列表
     public function chipped_list($type=1, $page=1, $count=10)
     {
