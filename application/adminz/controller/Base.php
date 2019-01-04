@@ -95,7 +95,14 @@ class Base extends Controller
                 foreach ($role_auth as $key => $value) {
                     $role_auth[$key] = strtolower(str_replace('_', '', $role_auth[$key]));
                 }
-
+                if($this->adminInfo['role_id'] == 5){
+                    if(strtolower(CONTROLLER_NAME) == 'admin'){
+                        if(strtolower(ACTION_NAME) != 'add_money'){
+                            $this->error('抱歉您没有操作权限');
+                        }   
+                    }
+                    
+                }
                 if(!in_array(strtolower(CONTROLLER_NAME), $role_auth)){
                     $this->error('抱歉您没有操作权限');
                 }

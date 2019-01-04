@@ -395,7 +395,11 @@ class Gendan extends Base
                 if($type == 2){
                     $total_count = db('order')->where('order_type=3 and order_status=1 and is_win>0 and user_id='.$list[$key]['user_id'])->count();
                     $win_count = db('order')->where('order_type=3 and order_status=1 and is_win=1 and user_id='.$list[$key]['user_id'])->count();
-                    $win_rate = round($win_count/$total_count, 2);
+                    if($total_count > 0){
+                        $win_rate = round($win_count/$total_count, 2);
+                    }else{
+                        $win_rate = 0;
+                    }
                     $data[$key]['win_rate'] = $win_rate;
                 }
             }

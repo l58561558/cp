@@ -60,8 +60,9 @@ class AccountDetails extends Base
             $where .= ' and user_id ='.$data['id'];
         }
         if(!empty($data['phone'])){
-            $map .= ' and phone like "%'.$data['phone'].'%"';
-            $where .= ' and phone like "%'.$data['phone'].'%"';
+            $user_id = db('user')->where('phone like "%'.$data['phone'].'%"')->value('id');
+            $map .= ' and user_id = "'.$user_id.'"';
+            $where .= ' and user_id = "'.$user_id.'"';
         }
         if(!empty($data['yhid'])){
             $user_id = db('user')->where('yhid like "%'.$data['yhid'].'%"')->value('id');

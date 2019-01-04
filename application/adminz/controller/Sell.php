@@ -33,7 +33,8 @@ class Sell extends Base
 
         $admin = session(config('admin_site.session_name'));
         $role_id = $admin['role_id'];
-        if($role_id == 1){
+
+        if($role_id == 1 || $role_id == 5){
             $head_data['today_order_money'] = 0;
             $head_data['seven_order_money'] = 0;
             $head_data['month_order_money'] = 0;

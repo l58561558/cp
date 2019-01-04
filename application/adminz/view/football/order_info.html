@@ -57,7 +57,7 @@
                                 <td style="text-align: center;">{$item.down_score}</td>
                                 <td style="text-align: center;">
                                     {volist name='item.tz_result' id='info'}
-                                        {$info.cate_name}{$info.cate_odds}
+                                        {$info.cate_name}'{$info.cate_odds}'
                                         {if condition="$info.is_win eq 0"}<span style="color: #ce6a14">(未开奖)</span>{/if}
                                         {if condition="$info.is_win eq 1"}<span style="color: green">(正确)</span>{/if}
                                         {if condition="$info.is_win eq 2"}<span style="color: red">(不正确)</span>{/if}
@@ -65,7 +65,7 @@
                                 </td>
                                 <td style="text-align: center;">
                                     {volist name='item.win_result' id='cate'}
-                                        ({$cate.cate_name}{$cate.cate_odds})
+                                        ({$cate.cate_name}'{$cate.cate_odds}')
                                     {/volist}
                                 </td>
                                 <td style="text-align: center;">
