@@ -10,8 +10,8 @@ class History extends Base
 	{
 		$nba_game = db('nba_game')->field('id,end_time,home_team,road_team,home_score,road_score')->where('is_postpone=0 and status=0')->order('end_time','desc')->find();
 		$fb_game = db('fb_game')->field('id,end_time,home_team,road_team,down_score')->where('is_postpone=0 and status=0')->order('end_time','desc')->find();
-		$fb_game['home_score'] = explode(':', $fb_game['down_score'])[1];
-		$fb_game['road_score'] = explode(':', $fb_game['down_score'])[0];
+		$fb_game['home_score'] = explode(':', $fb_game['down_score'])[0];
+		$fb_game['road_score'] = explode(':', $fb_game['down_score'])[1];
 		$data['nba_game'] = $nba_game;
 		$data['fb_game'] = $fb_game;
 
@@ -26,8 +26,8 @@ class History extends Base
 		if($type == 1){
 			$data = db('fb_game')->where('is_postpone=0 and status=0')->limit($start, $count)->order('end_time','desc')->select();
 			foreach ($data as $key => $value) {
-				$data[$key]['home_score'] = explode(':', $data[$key]['down_score'])[1];
-				$data[$key]['road_score'] = explode(':', $data[$key]['down_score'])[0];
+				$data[$key]['home_score'] = explode(':', $data[$key]['down_score'])[0];
+				$data[$key]['road_score'] = explode(':', $data[$key]['down_score'])[1];
 				$data[$key]['result'] = db('fb_game_cate')->field('cate_name,cate_code,cate_odds')->where('is_win=1 and game_id='.$data[$key]['id'])->select();
 				foreach ($data[$key]['result'] as $ke => $val) {
 					if(in_array($data[$key]['result'][$ke]['cate_code'], $let_arr)){

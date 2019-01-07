@@ -371,8 +371,6 @@ class Football extends Base
             case $score == 0:  return 'total_zero';
         }
     }
-    // 结算
-    // 通过比赛ID查其所有的投注选项ID -> 在通过投注选项ID查询所有的订单 -> 结算
     public function fb_over($id)
     {
         set_time_limit(0);
@@ -384,6 +382,15 @@ class Football extends Base
         $game = db('fb_game')->where('id='.$id)->find();
         if($game['is_postpone'] == 1){
             db('fb_game_cate')->where('game_id='.$id)->update(array('is_win'=>1,'cate_odds'=>1));
+            $info = db('order_info')->where('game_id='.$id)->select();
+            foreach ($info as $key => $value) {
+                $tz_odds = explode(',', $info[$key]['tz_odds']);
+                foreach ($tz_odds as $ke => $val) {
+                    $tz_odds[$ke] = 1;
+                }
+                $tz_oddss = implode(',', $tz_odds);
+                db('order_info')->where('order_info_id='.$info[$key]['order_info_id'])->setField('tz_odds',$tz_oddss);
+            }
         }else{
             if(empty($game['top_score']) && empty($game['down_score'])){
                 $this->error("请输入分数比!");
@@ -521,7 +528,6 @@ class Football extends Base
                     }
 
                     $total_odds = 0;
-
                     if(count($order_tz_data) == count($order_win_data)){
                         for ($i=0; $i < count($order_tz_data); $i++) { 
                             if($order_tz_data[$i] == $order_win_data[$i]){
@@ -535,13 +541,12 @@ class Football extends Base
                                 $total_odds += $cate_odds;
                             }
                         }
-                        if($order['order_type'] != 3){
+                        if($order['order_type'] != 3 || $game['is_postpone'] != 1){
                             $total_odds = ($total_odds*0.08)+$total_odds;
                         }
                         $win_money = $total_odds*$order['multiple']*2;
                     }
-                    dump($total_odds);
-                    // Db::rollback();
+
                     if($total_odds > 0){
                         // 如果订单为合买订单
                         if($order['order_type'] == 2){
@@ -656,14 +661,13 @@ class Football extends Base
         if($res > 0) {
             // 提交事务
             Db::commit();
-            echo "结算成功";
             Log::write('结算成功:game_id='.$id);
         }else{
             Log::write('比赛已结算:game_id='.$id);
-            echo "比赛已结算,请勿重复提交";
             // 回滚事务
             Db::rollback();
         }
+        return $res;
     }
      /** 
 

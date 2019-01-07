@@ -342,7 +342,7 @@ class Nba extends Base
         $data['multiple'] = $order['multiple'];
         $data['order_type'] = $order['order_type'];
 
-        $let_arr = array('let_score_home_win','let_score_home_lose');
+        $let_arr = array('let_score_home_win','let_score_home_lose','let_score_road_win');
         $total_arr = array('total_small','total_big');
 
         foreach ($order_info as $key => $value) {

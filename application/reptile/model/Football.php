@@ -72,6 +72,15 @@ class Football extends Model {
         $game = db('fb_game')->where('id='.$id)->find();
         if($game['is_postpone'] == 1){
             db('fb_game_cate')->where('game_id='.$id)->update(array('is_win'=>1,'cate_odds'=>1));
+            $info = db('order_info')->where('game_id='.$id)->select();
+            foreach ($info as $key => $value) {
+                $tz_odds = explode(',', $info[$key]['tz_odds']);
+                foreach ($tz_odds as $ke => $val) {
+                    $tz_odds[$ke] = 1;
+                }
+                $tz_oddss = implode(',', $tz_odds);
+                db('order_info')->where('order_info_id='.$info[$key]['order_info_id'])->setField('tz_odds',$tz_oddss);
+            }
         }else{
             if(empty($game['top_score']) && empty($game['down_score'])){
                 $this->error("请输入分数比!");
@@ -222,7 +231,7 @@ class Football extends Model {
                                 $total_odds += $cate_odds;
                             }
                         }
-                        if($order['order_type'] != 3){
+                        if($order['order_type'] != 3 || $game['is_postpone'] != 1){
                             $total_odds = ($total_odds*0.08)+$total_odds;
                         }
                         $win_money = $total_odds*$order['multiple']*2;

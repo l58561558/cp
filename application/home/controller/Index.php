@@ -45,7 +45,7 @@ class Index extends Base
     public function notice()
     {
         $start = date('Y-m-d H:i:s',time()-259200);
-        $data = db('account_details')->field('id,user_id,deal_cate,deal_money,add_time')->where('add_time>="'.$start.'"')->order('add_time desc')->select();
+        $data = db('account_details')->field('id,user_id,deal_cate,deal_money,add_time')->where('deal_cate=4 and add_time>="'.$start.'"')->order('add_time desc')->select();
         foreach ($data as $key => $value) {
             $data[$key]['user_name'] = db('user')->where('id='.$data[$key]['user_id'])->value('user_name');
             if(strlen($data[$key]['user_name']) > 3){
