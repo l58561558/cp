@@ -407,11 +407,11 @@ class Optional extends Base
 
         $i = 1;
         while (1) {
-            if ($i>10) break;
+            if ($i > 10) break;
             $new_url = $url . (string)($session);
             $api_result_json = file_get_contents($new_url);
             if ($api_result_json) break;
-            $session ++;
+            $session++;
             $i++;
         }
 
@@ -422,17 +422,19 @@ class Optional extends Base
         if (empty($api_result)) {
             $this->error('爬取数据错误');
         }
-        if (!$api_result['matchInfo'][0]['gameStartDate'] ||
-            !$api_result['matchInfo'][0]['issue'] ||
-            !$api_result['matchInfo'][0]['leageNameFull'] ||
-            !$api_result['matchInfo'][0]['hostName'] ||
-            !$api_result['matchInfo'][0]['guestName'] ||
-            !$api_result['matchInfo'][0]['kj_time'] ||
-            !$api_result['matchInfo'][0]['lotteryEndDate'] ||
-            $api_result['matchInfo'][0]['issue'] != $session
-        ) {
-            echo $session;
-            $this->error('爬取数据有改动！生成失败！');
+        foreach ($api_result['matchInfo'] as $matchInfo) {
+            if (!$matchInfo['gameStartDate'] ||
+                !$matchInfo['issue'] ||
+                !$matchInfo['leageNameFull'] ||
+                !$matchInfo['hostName'] ||
+                !$matchInfo['guestName'] ||
+                !$matchInfo['kj_time'] ||
+                !$matchInfo['lotteryEndDate'] ||
+                $matchInfo['issue'] != $session
+            ) {
+                Db::rollback();
+                $this->error('爬取数据异常！生成失败！');
+            }
         }
         $game = [
             'session' => $session,
